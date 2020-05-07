@@ -3,3 +3,150 @@
 @tailwind components;
 /*! purgecss end ignore */
 @tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+p {
+  @apply mb-4;
+}
+
+/* .hero {
+  height: 75vh;
+} */
+
+.mango-gradient {
+  background: rgb(255, 128, 75);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 128, 75, 1) 0%,
+    rgba(255, 25, 129, 1) 100%
+  );
+}
+
+.box {
+  @apply p-16;
+}
+
+.slider-item {
+  @apply px-12 text-center;
+}
+.parent {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.parent div:nth-child(1) {
+  grid-area: 1 / 1 / 2 / 4;
+}
+.parent div:nth-child(2) {
+  grid-area: 1 / 4 / 2 / 7;
+}
+.parent div:nth-child(3) {
+  grid-area: 2 / 1 / 3 / 3;
+}
+.parent div:nth-child(4) {
+  grid-area: 2 / 3 / 3 / 5;
+}
+.parent div:nth-child(5) {
+  grid-area: 2 / 5 / 3 / 7;
+}
+.parent div:nth-child(6) {
+  grid-area: 3 / 1 / 4 / 3;
+}
+.parent div:nth-child(7) {
+  grid-area: 3 / 3 / 4 / 5;
+}
+.parent div:nth-child(8) {
+  grid-area: 3 / 5 / 4 / 7;
+}
+
+/* .parent {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+
+  width: 100%;
+}
+
+.parent div:nth-child(1) {
+  grid-area: 1 / 1 / 2 / 4;
+}
+.parent div:nth-child(2) {
+  grid-area: 1 / 4 / 2 / 7;
+}
+.parent div:nth-child(3) {
+  grid-area: 2 / 1 / 3 / 3;
+}
+.parent div:nth-child(4) {
+  grid-area: 2 / 3 / 3 / 5;
+}
+.parent div:nth-child(5) {
+  grid-area: 2 / 5 / 3 / 7;
+}
+
+.parent div:nth-child(6) {
+  grid-area: 3 / 1 / 4 / 3;
+}
+.parent div:nth-child(7) {
+  grid-area: 3 / 3 / 4 / 5;
+}
+.parent div:nth-child(8) {
+  grid-area: 3 / 5 / 4 / 7;
+} */
+
+.video-bg {
+  height: 95vh;
+}
+
+.vimeo-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+  background-color: #000000;
+}
+
+.vimeo-wrapper iframe {
+  width: 100vw;
+  height: 56.25vw; /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
+  min-height: 100vh;
+  min-width: 177.77vh; /* Given a 16:9 aspect ratio, 16/9*100 = 177.77 */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.vimeo-wrapper:after {
+  content: "";
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+}
+
+.slick-dots li button:before {
+  color: #ffccaa !important;
+}
+.slick-dots li.slick-active button:before {
+  color: #ff12aa !important;
+}
+
+ul.slick-dots {
+  position: static;
+}
