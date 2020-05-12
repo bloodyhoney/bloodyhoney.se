@@ -35,7 +35,6 @@ const Page = ({ data }) => {
 
   return (
     <Layout>
-      s
       <PageTemplate title={page.title} content={page.content} />
     </Layout>
   );

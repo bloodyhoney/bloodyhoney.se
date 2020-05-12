@@ -14,15 +14,15 @@ p {
   @apply mb-4;
 }
 
-/* .hero {
-  height: 75vh;
-} */
+.headroom {
+  z-index: 100 !important;
+}
 
 .mango-gradient {
   background: rgb(255, 128, 75);
   background: linear-gradient(
     180deg,
-    rgba(255, 128, 75, 1) 0%,
+    rgba(255, 128, 75, 1) 20%,
     rgba(255, 25, 129, 1) 100%
   );
 }
@@ -31,8 +31,33 @@ p {
   @apply p-16;
 }
 
+footer.footer {
+  background: url("images/footer-texture.jpg") repeat-x;
+}
+
+.footer-inner {
+  background: url("images/grass_01.png") repeat-x;
+  background-position: bottom;
+}
+
 .slider-item {
   @apply px-12 text-center;
+}
+
+.overlay-effect {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.overlay-effect:hover {
+  opacity: 1;
 }
 .parent {
   display: grid;
@@ -66,40 +91,6 @@ p {
 .parent div:nth-child(8) {
   grid-area: 3 / 5 / 4 / 7;
 }
-
-/* .parent {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-
-  width: 100%;
-}
-
-.parent div:nth-child(1) {
-  grid-area: 1 / 1 / 2 / 4;
-}
-.parent div:nth-child(2) {
-  grid-area: 1 / 4 / 2 / 7;
-}
-.parent div:nth-child(3) {
-  grid-area: 2 / 1 / 3 / 3;
-}
-.parent div:nth-child(4) {
-  grid-area: 2 / 3 / 3 / 5;
-}
-.parent div:nth-child(5) {
-  grid-area: 2 / 5 / 3 / 7;
-}
-
-.parent div:nth-child(6) {
-  grid-area: 3 / 1 / 4 / 3;
-}
-.parent div:nth-child(7) {
-  grid-area: 3 / 3 / 4 / 5;
-}
-.parent div:nth-child(8) {
-  grid-area: 3 / 5 / 4 / 7;
-} */
 
 .video-bg {
   height: 95vh;
@@ -140,6 +131,8 @@ p {
   position: absolute;
 }
 
+/* Carousel */
+
 .slick-dots li button:before {
   color: #ffccaa !important;
 }
@@ -149,4 +142,47 @@ p {
 
 ul.slick-dots {
   position: static;
+}
+
+.next {
+  right: -3.5rem;
+}
+.prev {
+  left: -3.5rem;
+}
+.next,
+.prev {
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  top: 50%;
+  display: block;
+  padding: 0;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+
+  cursor: pointer;
+
+  color: transparent;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }

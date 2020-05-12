@@ -6,7 +6,7 @@ import { Link } from "gatsby";
 function PortfolioItem({ item }) {
   return (
     <div className="w-full">
-      <Link to={`blog/${item.node.slug}`}>
+      <Link to={`blogg/${item.node.slug}`}>
         <div className="relative group m-4">
           <div>
             <Img

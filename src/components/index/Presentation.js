@@ -4,10 +4,10 @@ function Presentation() {
   return (
     <div className="md:flex">
       <div className="flex items-center md:w-1/2 box mango-gradient text-yellow-400">
-        <div className="">
+        <div id="om" className="">
           <header>
-            <div className="font-bold text-xl">Det här är</div>
-            <h3 className="text-4xl font-bold">Bloody Honey</h3>
+            <div className="text-xl">Det här är</div>
+            <h3 className="text-5xl font-bold mb-4">Bloody Honey</h3>
           </header>
           <div>
             <p>Bloody Honey är produktionsbolaget där allt är möjligt.</p>
@@ -33,22 +33,11 @@ function Presentation() {
           </div>
         </div>
       </div>
-      <div className="flex items-center md:w-1/2 bg-teal-400 box text-yellow-400">
+      <div className="flex items-center justify-center md:w-1/2 bg-gray-900 box text-gray-700">
         <div className="">
           <header>
-            <h3 className="text-2xl font-bold">Sagt om oss</h3>
+            <h3 className="text-2xl font-bold">TBC</h3>
           </header>
-          <div>
-            <p>Bloody Honey är produktionsbolaget där allt är möjligt.</p>
-            <p>
-              Ödlor som äter choklad… dansande bakterier… barn på månen…
-              kompositörer med fattig skäggväxt…
-            </p>
-            <p>
-              Detta är bara några av historierna vi berättat tillsammans med
-              våra kunder.
-            </p>
-          </div>
         </div>
       </div>
     </div>

@@ -5,11 +5,11 @@ import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import BlogFeedPage from "../components/blog/BlogFeedPage";
-
+import Pagination from "../components/blog/Pagination";
 import SEO from "../components/seo";
 
 function BlogPage(props) {
-  const { data } = props;
+  const { data, pageContext } = props;
   const { edges: posts } = data.allWordpressPost;
 
   return (
@@ -17,10 +17,13 @@ function BlogPage(props) {
       <Layout>
         <SEO
           keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
-          title="Bad Taste Empire"
+          title="Bloody Honey"
         />
 
         <BlogFeedPage posts={posts} />
+        <div className="max-w-6xl mx-auto">
+          <Pagination pageContext={pageContext} pathPrefix="/" />
+        </div>
       </Layout>
     </div>
   );
@@ -50,17 +53,18 @@ export const pageQuery = graphql`
       edges {
         node {
           title
+          excerpt
           featured_media {
             localFile {
               childImageSharp {
-                fluid(maxWidth: 600, maxHeight: 600, quality: 70) {
+                fluid(maxWidth: 600, quality: 70) {
                   ...GatsbyImageSharpFluid
                 }
               }
             }
           }
           slug
-          date(formatString: "YY.MM.DD")
+          date(formatString: "Do MMMM  YYYY", locale: "Sv")
           content
           wordpress_id
         }

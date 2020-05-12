@@ -137,7 +137,7 @@ exports.createPages = ({ actions, graphql }) => {
       paginate({
         createPage,
         items: posts,
-        itemsPerPage: 8,
+        itemsPerPage: 9,
         pathPrefix: ({ pageNumber }) => (pageNumber === 0 ? `/blogg` : `/page`),
         component: blogTemplate,
       });

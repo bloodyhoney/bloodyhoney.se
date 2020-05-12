@@ -1,7 +1,7 @@
 import { Link } from "gatsby";
 import React, { useState } from "react";
 import Headroom from "react-headroom";
-import Logo from "./common/Logo";
+import Logo from "./logo/Logo";
 function Header() {
   const [isExpanded, toggleExpansion] = useState(false);
 
@@ -10,7 +10,7 @@ function Header() {
       <header className="bg-black">
         <div className="flex flex-wrap items-center justify-between p-4 mx-auto md:py-4 md:px-8">
           <Link to="/">
-            <div className="w-48">
+            <div className="w-48 -mb-2">
               <Logo />
             </div>
           </Link>
@@ -44,7 +44,7 @@ function Header() {
                 title: `Portfolio`,
               },
               {
-                route: `/om-oss`,
+                route: `/#om`,
                 title: `Om oss`,
               },
               {
@@ -53,15 +53,15 @@ function Header() {
               },
               {
                 route: `/blogg`,
-                title: `blogg`,
+                title: `Blogg`,
               },
               {
-                route: `/kontakt`,
+                route: `/#kontakt`,
                 title: `Kontakt`,
               },
             ].map((link) => (
               <Link
-                className="block mt-4 text-white no-underline md:inline-block md:mt-0 md:ml-6"
+                className="block mt-4 text-white font-bold no-underline md:inline-block md:mt-0 md:ml-6"
                 key={link.title}
                 to={link.route}
               >

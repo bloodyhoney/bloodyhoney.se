@@ -1,6 +1,6 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import Logo from "../common/Logo";
+import Logo from "../../components/logo/Logo";
 function Hero() {
   const data = useStaticQuery(graphql`
     {
@@ -28,17 +28,18 @@ function Hero() {
         ></iframe>
       </div>
       <div className="flex flex-row h-full justify-center items-center text-white">
-        <div className="flex flex-col justify-center items-center">
-          <div className="mb-8 w-1/2">
+        <div className="flex flex-col justify-center items-center px-16">
+          <div className="mb-0 w-1/2 px-16">
             <Logo />
           </div>
+          <div className="border-b border-4 border-white w-1/2 mt-0 mb-8"></div>
           <div className="text-2xl">{site.description}</div>
-          <div className="my-8">
+          <div className="my-12">
             <a
               href="#contact"
-              className="border border-white rounded-full p-4 hover:bg-white hover:text-gray-900 bg-transparent"
+              className="rounded-full p-4 bg-white hover:bg-pink-200 text-gray-900 transition-all duration-200"
             >
-              Contact
+              Kontakt
             </a>
           </div>
         </div>

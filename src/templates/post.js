@@ -4,7 +4,6 @@ import React from "react";
 import SEO from "../components/seo";
 import Layout from "../components/layout";
 import { Link, graphql } from "gatsby";
-import Img from "gatsby-image";
 
 function newsItemTemplate({ data }) {
   let news = data.allWordpressPost.edges[0].node;
@@ -28,9 +27,7 @@ function newsItemTemplate({ data }) {
               <date>{news.date}</date>
             </div>
           </header>
-          <div className="max-w-xl">
-            <Img fluid={news.featured_media.localFile.childImageSharp.fluid} />
-          </div>
+
           <div>
             <div dangerouslySetInnerHTML={{ __html: news.content }} />
           </div>

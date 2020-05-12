@@ -4,9 +4,15 @@ import React from "react";
 import SEO from "../components/seo";
 import Layout from "../components/layout";
 import { graphql } from "gatsby";
+import Img from "gatsby-image";
+import VimeoPlayer from "../components/portfolio/VimeoPlayer";
 
 function portfolioItem({ data }) {
-  console.log(data);
+  const portfolio = data.allWordpressWpPortfolio.edges[0].node;
+  const video01 = data.allWordpressWpPortfolio.edges[0].node.acf.video01;
+  const video02 = data.allWordpressWpPortfolio.edges[0].node.acf.video02;
+  const video03 = data.allWordpressWpPortfolio.edges[0].node.acf.video03;
+
   return (
     <Layout>
       <SEO
@@ -14,14 +20,54 @@ function portfolioItem({ data }) {
         title="Home"
       />
 
-      <section className="text-center">
-        <div className="max-w-xl mx-auto my-8">
-          <header className="mb-8">
-            <h3 className="text-2xl font-bold "></h3>
-            <div>{data.allWordpressWpPortfolio.edges[0].node.title}</div>
-          </header>
-          <div className="max-w-xl"></div>
-          <div></div>
+      <section className="">
+        <div id="hero-image" className="">
+          <Img
+            sizes={{
+              ...portfolio.featured_media.localFile.childImageSharp.fluid,
+              aspectRatio: 16 / 9,
+            }}
+          />
+        </div>
+        <div id="content" className="flex flex-col max-w-4xl mx-auto p-16">
+          <div className="w-full">
+            <header>
+              <h1 className="text-center font-bold text-4xl mb-8">
+                <div
+                  dangerouslySetInnerHTML={{ __html: portfolio.title }}
+                ></div>
+              </h1>
+            </header>
+            <div className="text-lg mb-8">
+              <div
+                dangerouslySetInnerHTML={{ __html: portfolio.acf.bild02 }}
+              ></div>
+            </div>
+          </div>
+          <div className="flex flex-col">
+            {video01 ? (
+              <div className="w-full mb-8">
+                <VimeoPlayer id={video01} />
+              </div>
+            ) : (
+              ""
+            )}
+
+            {video02 ? (
+              <div className="w-full mb-8">
+                <VimeoPlayer id={video02} />
+              </div>
+            ) : (
+              ""
+            )}
+            {video03 ? (
+              <div className="w-full mb-8">
+                <VimeoPlayer id={video03} />
+              </div>
+            ) : (
+              ""
+            )}
+          </div>
         </div>
       </section>
     </Layout>
@@ -35,8 +81,20 @@ export const query = graphql`
     allWordpressWpPortfolio(filter: { slug: { eq: $slug } }) {
       edges {
         node {
+          acf {
+            bild02
+            video01
+          }
           title
-
+          featured_media {
+            localFile {
+              childImageSharp {
+                fluid(maxWidth: 2000, quality: 80) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
           slug
           date(formatString: "MMMM Do, Y")
           content
