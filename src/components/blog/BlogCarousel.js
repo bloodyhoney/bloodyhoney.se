@@ -46,7 +46,7 @@ function BlogCarousel() {
   return (
     <div className="py-8 bg-black">
       <div className="text-white text-center pb-2 text-3xl font-bold">
-        Blogg
+        Bloody Blogg
       </div>
       <div className="px-16 mx-auto pb-4">
         <Slider {...settings}>

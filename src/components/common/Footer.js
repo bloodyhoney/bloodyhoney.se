@@ -1,4 +1,5 @@
 import React from "react";
+import SocialLinks from "../index/SocialLinks";
 
 function Footer() {
   return (
@@ -37,8 +38,6 @@ function Footer() {
                     , 070-422 48 70
                   </p>
                 </div>
-                <p>&nbsp;</p>
-                <p>&nbsp;</p>
               </div>
             </div>
             <div className="flex-1">
@@ -54,9 +53,11 @@ function Footer() {
           </nav>
           <div className="text-sm text-center"> </div>
         </div>
-        <div className="bg-grass">
-          {" "}
-          <div className="text-white text-center">
+        <div className="bg-grass py-8">
+          <div className="text-center mb-4">
+            <SocialLinks fill={"#ffffff"} />
+          </div>
+          <div className="text-green-500 text-center">
             &copy; Bloodhoney {new Date().getFullYear()}
           </div>
         </div>

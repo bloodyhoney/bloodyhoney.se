@@ -6,6 +6,9 @@ module.exports = {
   },
   theme: {
     extend: {
+      colors: {
+        grass: `#1a8642`,
+      },
       transitionProperty: {
         display: "display",
         height: "height",

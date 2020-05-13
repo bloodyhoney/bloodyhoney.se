@@ -7,7 +7,7 @@ const Pagination = ({ pageContext }) => {
   const { previousPagePath, nextPagePath } = pageContext;
 
   return (
-    <div className="bg-white">
+    <div>
       <nav className="pagination pt-8 mx-auto w-full py-8" role="navigation">
         <div
           className={`${
@@ -15,14 +15,14 @@ const Pagination = ({ pageContext }) => {
           } flex flex-row `}
         >
           {previousPagePath && (
-            <div className="navbar-item bg-gray-900 rounded-full text-white font-bold py-3 px-6">
+            <div className="navbar-item bg-white rounded-full text-black font-bold py-3 px-6">
               <Link to={previousPagePath} rel="prev">
                 Föregående sida
               </Link>
             </div>
           )}
           {nextPagePath && (
-            <div className="navbar-item bg-gray-900 rounded-full text-white font-bold py-3 px-6">
+            <div className="navbar-item bg-white rounded-full text-black font-bold py-3 px-6">
               <Link to={nextPagePath} rel="next">
                 Nästa sida
               </Link>

@@ -37,7 +37,7 @@ function Header() {
             {[
               {
                 route: `/`,
-                title: `Topp`,
+                title: `Hem`,
               },
               {
                 route: `/portfolio`,
@@ -46,10 +46,6 @@ function Header() {
               {
                 route: `/#om`,
                 title: `Om oss`,
-              },
-              {
-                route: `/shop`,
-                title: `Shop`,
               },
               {
                 route: `/blogg`,

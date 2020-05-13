@@ -9,7 +9,7 @@ function BlogFeedItem({ post }) {
     <div>
       <Link to={`blogg/${blogg.slug}`}>
         <div className="group">
-          <div>
+          <div className="mb-4">
             <Img
               sizes={{
                 ...blogg.featured_media.localFile.childImageSharp.fluid,
@@ -17,15 +17,15 @@ function BlogFeedItem({ post }) {
               }}
             />
           </div>
+          <div className="text-sm text-gray-500">{blogg.date}</div>
           <div className="font-bold my-2">
             {" "}
             <div dangerouslySetInnerHTML={{ __html: blogg.title }}></div>
           </div>
-          <div>
+          <div className="text-sm">
             {" "}
             <div dangerouslySetInnerHTML={{ __html: blogg.excerpt }}></div>
           </div>
-          <div className="text-sm text-gray-500">{blogg.date}</div>
         </div>
       </Link>
     </div>

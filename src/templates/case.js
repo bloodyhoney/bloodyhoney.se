@@ -6,6 +6,7 @@ import Layout from "../components/layout";
 import { graphql } from "gatsby";
 import Img from "gatsby-image";
 import VimeoPlayer from "../components/portfolio/VimeoPlayer";
+import Portfolio from "../components/portfolio/Portfolio";
 
 function portfolioItem({ data }) {
   const portfolio = data.allWordpressWpPortfolio.edges[0].node;
@@ -69,6 +70,9 @@ function portfolioItem({ data }) {
             )}
           </div>
         </div>
+      </section>
+      <section>
+        <Portfolio />
       </section>
     </Layout>
   );

@@ -9,7 +9,7 @@ function Presentation() {
             <div className="text-xl">Det här är</div>
             <h3 className="text-5xl font-bold mb-4">Bloody Honey</h3>
           </header>
-          <div>
+          <div className="text-lg">
             <p>Bloody Honey är produktionsbolaget där allt är möjligt.</p>
             <p>
               Ödlor som äter choklad… dansande bakterier… barn på månen…
