@@ -3,7 +3,7 @@ import React from "react";
 import Logo from "../../components/logo/Logo";
 function Hero() {
   return (
-    <div className="relative video-bg">
+    <div className="flex-1 relative video-bg">
       <div className="vimeo-wrapper">
         <iframe
           src="https://player.vimeo.com/video/316772070?background=1&autoplay=1&muted=1&loop=1&byline=0&title=0"
@@ -30,6 +30,7 @@ function Hero() {
               Kontakt
             </a>
           </div>
+          <div className="ca3-scroll-down-link ca3-scroll-down-arrow w-16 h-16"></div>
         </div>
       </div>
     </div>

@@ -1,6 +1,19 @@
 import React from "react";
-
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 function Presentation() {
+  var settings = {
+    dots: false,
+    arrows: false,
+    infinite: true,
+    autoplay: true,
+    fade: true,
+    autoplaySpeed: 4000,
+    speed: 800,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
   return (
     <div className="md:flex">
       <div className="flex items-center md:w-1/2 box mango-gradient text-yellow-400">
@@ -33,11 +46,30 @@ function Presentation() {
           </div>
         </div>
       </div>
-      <div className="flex items-center justify-center md:w-1/2 bg-gray-900 box text-gray-700">
-        <div className="">
-          <header>
-            <h3 className="text-2xl font-bold">TBC</h3>
-          </header>
+      <div className="items-center justify-center md:w-1/2 bg-gray-900 box text-gray-600">
+        <div className="pt-24">
+          <Slider {...settings}>
+            <div className="text-center">
+              <header>
+                <h3 className="text-6xl font-bold text-yellow-400">&rdquo;</h3>
+              </header>
+              <div className="text-pink-500 font-bold text-3xl mb-8 italic">
+                Bloody Honey är helt enkelt världens bästa produktionsbolag
+              </div>
+              <div className="text-2xl text-yellow-400">
+                - Sveriges Television
+              </div>
+            </div>
+            <div className="text-center">
+              <header>
+                <h3 className="text-6xl font-bold text-yellow-400">&rdquo;</h3>
+              </header>
+              <div className="text-pink-500 font-bold text-3xl mb-8 italic">
+                Vi är supernöjda med Bloody Honey
+              </div>
+              <div className="text-2xl text-yellow-400">- Netflix</div>
+            </div>
+          </Slider>
         </div>
       </div>
     </div>

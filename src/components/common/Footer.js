@@ -7,7 +7,7 @@ function Footer() {
       <footer className="footer bg-purple-900 text-white pt-16">
         <div className="footer-inner pb-8">
           <nav className="flex flex-row p-4 max-w-6xl mx-auto text-sm md:p-8">
-            <div className="flex-1">
+            <div className="flex-1 flex items-center">
               <div>
                 <header className="mb-8">
                   <h3 className="font-bold text-3xl">Bloody Beasts</h3>

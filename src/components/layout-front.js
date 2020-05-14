@@ -12,7 +12,7 @@ function LayoutFront({ children }) {
         <div>
           <Header />
         </div>
-        <div className="flex-grow">
+        <div className="flex flex-grow">
           <Hero />
         </div>
       </div>
