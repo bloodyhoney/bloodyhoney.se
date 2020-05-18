@@ -47,7 +47,7 @@ function Presentation() {
         </div>
       </div>
       <div className="items-center justify-center md:w-1/2 bg-gray-900 box text-gray-600">
-        <div className="pt-24">
+        <div className="pt-32">
           <Slider {...settings}>
             <div className="text-center">
               <header>

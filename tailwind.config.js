@@ -22,7 +22,14 @@ module.exports = {
   variants: {
     display: ["responsive", "hover", "focus", "group-hover"],
     transitionProperty: ["responsive", "hover", "group-hover", "focus"],
-    backgroundColor: ["responsive", "hover", "focus", "group-hover"],
+    backgroundColor: [
+      "responsive",
+      "hover",
+      "focus",
+      "group-hover",
+      "odd",
+      "even",
+    ],
   },
   // https://github.com/tailwindcss/custom-forms
   plugins: [require("@tailwindcss/custom-forms")],

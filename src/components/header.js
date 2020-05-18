@@ -7,8 +7,8 @@ function Header() {
 
   return (
     <Headroom>
-      <header className="bg-black">
-        <div className="flex flex-wrap items-center justify-between p-4 mx-auto md:py-4 md:px-8">
+      <header className="bg-black bg-opacity-75">
+        <div className="flex flex-wrap items-center justify-between p-4 mx-auto md:py-2 uppercase md:px-8">
           <Link to="/">
             <div className="w-48 -mb-2">
               <Logo />
@@ -37,7 +37,7 @@ function Header() {
             {[
               {
                 route: `/`,
-                title: `Hem`,
+                title: `Topp`,
               },
               {
                 route: `/portfolio`,
@@ -57,7 +57,7 @@ function Header() {
               },
             ].map((link) => (
               <Link
-                className="block mt-4 text-white font-bold no-underline md:inline-block md:mt-0 md:ml-6"
+                className="block mt-4 text-white font-normal no-underline md:inline-block md:mt-0 md:ml-6"
                 key={link.title}
                 to={link.route}
               >
