@@ -16,6 +16,7 @@ function BlogCarousel() {
             title
             status
             slug
+            excerpt
             featured_media {
               localFile {
                 childImageSharp {

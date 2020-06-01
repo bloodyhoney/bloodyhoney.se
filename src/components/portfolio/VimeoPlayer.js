@@ -11,7 +11,6 @@ function VimeoPlayer({ id }) {
         title="vimeo-player"
         src={`https://player.vimeo.com/video/${id}/`}
         frameBorder="0"
-        allowFullscreen
       ></iframe>
     </div>
   );

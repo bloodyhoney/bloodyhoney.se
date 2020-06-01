@@ -14,13 +14,13 @@ function IndexPage() {
         title="Home"
       />
 
-      <section>
+      <section id="portfolio">
         <Portfolio />
       </section>
       <section>
         <Presentation />
       </section>
-      <section className="relative">
+      <section id="#blogg" className="relative">
         <BlogCarousel />
       </section>
     </LayoutFront>

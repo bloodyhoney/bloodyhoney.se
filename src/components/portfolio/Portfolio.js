@@ -10,6 +10,12 @@ const Portfolio = () => {
           node {
             title
             slug
+            acf {
+              case_kategori {
+                name
+                slug
+              }
+            }
             featured_media {
               localFile {
                 childImageSharp {

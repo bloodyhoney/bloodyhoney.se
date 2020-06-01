@@ -5,9 +5,9 @@ import { Link } from "gatsby";
 
 function PortfolioItem({ item }) {
   return (
-    <div className="portfolio-item">
+    <div className="portfolio-item group">
       <Link to={`portfolio/${item.node.slug}`}>
-        <div className="relative group">
+        <div className="relative overflow-hidden">
           <div className="z-10 overlay-effect h-100 w-100"></div>
           <div className="">
             <Img
@@ -17,17 +17,20 @@ function PortfolioItem({ item }) {
               }}
             />
           </div>
-          <div className="info-box z-20 uppercase absolute bottom-0 left-0 w-full bg-pink-600 bg-opacity-75 text-white block px-4 py-2">
-            <div className="flex flex-row justify-between items-center">
-              <h2 className="font-bold text-lg">
+          <div className="info-box z-20 uppercase absolute bottom-0 left-0 w-full bg-pink-600 bg-opacity-75 text-white block px-4">
+            <div className="portfolio-title">
+              <h2 className="font-bold text-lg pt-2 pb-1">
                 <div
-                  dangerouslySetInnerHTML={{ __html: item.node.title }}
+                  dangerouslySetInnerHTML={{
+                    __html: item.node.acf.case_kategori[0].name,
+                  }}
                 ></div>
               </h2>
             </div>
-
-            <div className="hidden group-hover:block capitalize text-sm pt-4">
-              Film & TV motion graphics till Barn, dokumentärt och långfilm
+            <div className="content">
+              <div className="capitalize text-sm pt-1 pb-2">
+                Film & TV motion graphics till Barn, dokumentärt och långfilm{" "}
+              </div>
             </div>
           </div>
         </div>

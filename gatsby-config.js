@@ -58,7 +58,12 @@ module.exports = {
         useACF: true,
       },
     },
-
+    {
+      resolve: "gatsby-plugin-anchor-links",
+      options: {
+        offset: 0,
+      },
+    },
     {
       resolve: `gatsby-plugin-purgecss`,
       options: {

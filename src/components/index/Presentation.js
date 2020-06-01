@@ -16,11 +16,13 @@ function Presentation() {
   };
   return (
     <div className="md:flex">
-      <div className="flex items-center md:w-1/2 box mango-gradient text-yellow-400">
-        <div id="om" className="">
-          <header>
+      <div className="flex items-center md:w-1/2 p-4 md:p-16 mango-gradient text-yellow-400">
+        <div className="">
+          <header id="om">
             <div className="text-xl">Det här är</div>
-            <h3 className="text-5xl font-bold mb-4">Bloody Honey</h3>
+            <h3 className="text-3xl md:text-5xl font-bold mb-4">
+              Bloody Honey
+            </h3>
           </header>
           <div className="text-lg">
             <p>Bloody Honey är produktionsbolaget där allt är möjligt.</p>
@@ -46,17 +48,17 @@ function Presentation() {
           </div>
         </div>
       </div>
-      <div className="items-center justify-center md:w-1/2 bg-gray-900 box text-gray-600">
-        <div className="pt-32">
+      <div className="flex flex-wrap items-center justify-center justify-center md:w-1/2 p-8 md:p-8 bg-gray-900 box text-gray-600">
+        <div className="w-full">
           <Slider {...settings}>
             <div className="text-center">
               <header>
                 <h3 className="text-6xl font-bold text-yellow-400">&rdquo;</h3>
               </header>
-              <div className="text-pink-500 font-bold text-3xl mb-8 italic">
+              <div className="text-pink-500 font-bold text-xl md:text-3xl mb-6 italic">
                 Bloody Honey är helt enkelt världens bästa produktionsbolag
               </div>
-              <div className="text-2xl text-yellow-400">
+              <div className="text-xl md:text-2xl text-yellow-400">
                 - Sveriges Television
               </div>
             </div>
@@ -64,10 +66,13 @@ function Presentation() {
               <header>
                 <h3 className="text-6xl font-bold text-yellow-400">&rdquo;</h3>
               </header>
-              <div className="text-pink-500 font-bold text-3xl mb-8 italic">
+              <div className="text-pink-500 font-bold text-xl md:text-3xl mb-6 italic">
                 Vi är supernöjda med Bloody Honey
               </div>
-              <div className="text-2xl text-yellow-400">- Netflix</div>
+              <div className="text-xl md:text-2xl text-yellow-400">
+                - Netflix
+              </div>
+              <span id="blogg"></span>
             </div>
           </Slider>
         </div>

@@ -1,13 +1,15 @@
 import { Link } from "gatsby";
 import React, { useState } from "react";
-import Headroom from "react-headroom";
 import Logo from "./logo/Logo";
+import { AnchorLink } from "gatsby-plugin-anchor-links";
+import Scrollspy from "react-scrollspy";
+import Headroom from "react-headroom";
 function Header() {
   const [isExpanded, toggleExpansion] = useState(false);
 
   return (
     <Headroom>
-      <header className="bg-black bg-opacity-75">
+      <header id="#top" className="bg-black bg-opacity-75">
         <div className="flex flex-wrap items-center justify-between p-4 mx-auto md:py-2 uppercase md:px-8">
           <Link to="/">
             <div className="w-48 -mb-2">
@@ -34,36 +36,42 @@ function Header() {
               isExpanded ? `block` : `hidden`
             } md:block md:flex md:items-center w-full md:w-auto`}
           >
-            {[
-              {
-                route: `/`,
-                title: `Topp`,
-              },
-              {
-                route: `/portfolio`,
-                title: `Portfolio`,
-              },
-              {
-                route: `/#om`,
-                title: `Om oss`,
-              },
-              {
-                route: `/blogg`,
-                title: `Blogg`,
-              },
-              {
-                route: `/#kontakt`,
-                title: `Kontakt`,
-              },
-            ].map((link) => (
-              <Link
-                className="block mt-4 text-white font-normal no-underline md:inline-block md:mt-0 md:ml-6"
-                key={link.title}
-                to={link.route}
-              >
-                {link.title}
-              </Link>
-            ))}
+            <Scrollspy
+              items={["topp", "portfolio", "om", "blogg", "kontakt"]}
+              currentClassName="font-bold"
+            >
+              {[
+                {
+                  route: `/#topp`,
+                  title: `Topp`,
+                },
+                {
+                  route: `/#portfolio`,
+                  title: `Portfolio`,
+                },
+                {
+                  route: `#om`,
+                  title: `Om oss`,
+                },
+                {
+                  route: `/#blogg`,
+                  title: `Blogg`,
+                },
+                {
+                  route: `/#kontakt`,
+                  title: `Kontakt`,
+                },
+              ].map((link) => (
+                <AnchorLink
+                  className="block mt-4 text-white no-underline md:inline-block md:mt-0 md:ml-6"
+                  key={link.title}
+                  to={link.route}
+                  activeClassName="font-bold"
+                >
+                  {link.title}
+                </AnchorLink>
+              ))}
+            </Scrollspy>
           </nav>
         </div>
       </header>

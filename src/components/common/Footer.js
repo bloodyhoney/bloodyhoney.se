@@ -4,10 +4,10 @@ import SocialLinks from "../index/SocialLinks";
 function Footer() {
   return (
     <div id="kontakt">
-      <footer className="footer bg-purple-900 text-white pt-16">
-        <div className="footer-inner pb-8">
-          <nav className="flex flex-row p-4 mx-auto text-sm  px-16">
-            <div className="flex-1 flex items-center">
+      <footer className="footer bg-purple-900 text-white pt-8">
+        <div className="footer-inner pb-0 md:pb-24">
+          <div className="flex flex-col md:flex-row p-4 pb-16 md:pb-0 mx-auto text-sm  px-8 md:px-16">
+            <div className="flex-1 flex">
               <div>
                 <header className="mb-8">
                   <h3 className="font-bold text-3xl uppercase">
@@ -43,24 +43,36 @@ function Footer() {
               </div>
             </div>
             <div className="flex-1">
-              <div className="w-full">
+              <div className="w-full max-w-2xl">
                 <iframe
                   src="https://snazzymaps.com/embed/236298"
                   width="100%"
-                  height="400px"
+                  height="350px"
                 ></iframe>
               </div>
               <br />
+              <p>
+                <strong>T:</strong> +46 70-483 62 88 <strong>E:</strong>{" "}
+                <a href="mailto:charlotte@bloodyhoney.se">
+                  hello@bloodyhoney.se
+                  <br />
+                </a>
+                <strong>Besök oss:</strong> Södra Förstadsgatan 63, 214 20 Malmö
+              </p>
             </div>
-          </nav>
+          </div>
           <div className="text-sm text-center"> </div>
         </div>
-        <div className="bg-grass py-8">
-          <div className="text-center mb-4">
-            <SocialLinks fill={"#ffffff"} />
-          </div>
-          <div className="text-green-500 text-center">
-            &copy; Bloodhoney {new Date().getFullYear()}
+        <div className="bg-grass py-1">
+          <div className="flex flex-row md:px-16 items-center justify-start pb-2">
+            <div className="flex flex-row items-center">
+              <div className="md:-ml-2">
+                <SocialLinks fill={"#ffffff"} />
+              </div>
+              <div className="text-white font-bold text-center ml-8">
+                &copy; Bloodhoney {new Date().getFullYear()}
+              </div>
+            </div>
           </div>
         </div>
       </footer>
