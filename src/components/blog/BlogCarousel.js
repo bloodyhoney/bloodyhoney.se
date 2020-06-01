@@ -1,7 +1,7 @@
 /* eslint react/prop-types: 0 */
 import React from "react";
 import Slider from "react-slick";
-import { useStaticQuery, graphql } from "gatsby";
+import { useStaticQuery, graphql, Link } from "gatsby";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import BlogCarouselPost from "../blog/BlogCarouselPost";
@@ -43,6 +43,32 @@ function BlogCarousel() {
     slidesToScroll: 3,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
   return (
     <div className="py-8 bg-black">
@@ -55,6 +81,9 @@ function BlogCarousel() {
             return <BlogCarouselPost key={index} item={item} />;
           })}
         </Slider>
+        <div className="flex flex-row flex-wrap justify-end text-gray-500 pr-4 text-sm">
+          <Link to={"/blogg"}>Visa alla inlägg &rarr;</Link>
+        </div>
       </div>
     </div>
   );
