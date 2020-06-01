@@ -15,7 +15,7 @@ function Presentation() {
     slidesToScroll: 1,
   };
   return (
-    <div className="md:flex">
+    <div className="md:flex testimonials">
       <div className="flex items-center md:w-1/2 p-4 md:p-16 mango-gradient text-yellow-400">
         <div className="">
           <header id="om">

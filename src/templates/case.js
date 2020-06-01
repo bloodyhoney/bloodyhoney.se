@@ -28,7 +28,7 @@ function portfolioItem({ data }) {
         keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
         title="Home"
       />
-      <section className="">
+      <section className="case-slider-wrapper">
         <div className="flex flex-wrap flex-col w-full">
           <div className="w-full px-24 pt-8 pb-8 bg-gray-900 ">
             <Slider {...settings}>

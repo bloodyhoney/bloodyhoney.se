@@ -1,11 +1,7 @@
 /*! purgecss start ignore */
 @tailwind base;
 @tailwind components;
-.slick-track {
-  align-items: center;
-  justify-content: center;
-  display: flex !important;
-}
+
 /*! purgecss end ignore */
 @tailwind utilities;
 
@@ -154,7 +150,7 @@ footer.footer {
   position: absolute;
 }
 
-.slick-track {
+.case-slider-wrapper .slick-track {
   display: flex !important;
   align-items: center;
   justify-content: center;
