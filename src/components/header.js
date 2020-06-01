@@ -50,7 +50,7 @@ function Header() {
                   title: `Portfolio`,
                 },
                 {
-                  route: `#om`,
+                  route: `/#om`,
                   title: `Om oss`,
                 },
                 {
