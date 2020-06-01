@@ -1,6 +1,11 @@
 /*! purgecss start ignore */
 @tailwind base;
 @tailwind components;
+.slick-track {
+  align-items: center;
+  justify-content: center;
+  display: flex !important;
+}
 /*! purgecss end ignore */
 @tailwind utilities;
 
@@ -151,7 +156,8 @@ footer.footer {
 
 .slick-track {
   display: flex !important;
-  align-items: center !important;
+  align-items: center;
+  justify-content: center;
 }
 
 .slick-dots li button:before {
