@@ -13,7 +13,7 @@ function BlogPage(props) {
   const { edges: posts } = data.allWordpressPost;
 
   return (
-    <div>
+    <div className="blogg">
       <Layout>
         <SEO
           keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}

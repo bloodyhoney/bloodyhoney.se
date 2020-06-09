@@ -9,6 +9,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import CaseSlide from "../components/portfolio/CaseSlide";
+import Presentation from "../components/index/Presentation";
+import BlogCarousel from "../components/blog/BlogCarousel";
 
 function portfolioItem({ data }) {
   var settings = {
@@ -28,9 +30,12 @@ function portfolioItem({ data }) {
         keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
         title="Home"
       />
-      <section className="case-slider-wrapper">
+      <section
+        className="case-slider-wrapper"
+        style={{ backgroundColor: portfolio.acf.bakgrundsfarg_01 }}
+      >
         <div className="flex flex-wrap flex-col w-full">
-          <div className="w-full px-24 pt-8 pb-8 bg-gray-900 ">
+          <div className="w-full px-24 pt-8 pb-8 ">
             <Slider {...settings}>
               {/* Slide 1 */}
               {portfolio.acf.video01 || portfolio.acf.bild02 ? (
@@ -72,6 +77,12 @@ function portfolioItem({ data }) {
 
       <section>
         <Portfolio />
+      </section>
+      <section>
+        <Presentation />
+      </section>
+      <section id="#blogg" className="relative">
+        <BlogCarousel />
       </section>
     </Layout>
   );
@@ -145,6 +156,7 @@ export const query = graphql`
             video03
             video04
             video05
+            bakgrundsfarg_01
           }
           title
           featured_media {

@@ -15,7 +15,7 @@ function newsItemTemplate({ data }) {
         title="Home"
       />
 
-      <section className="text-center">
+      <section className="text-center blogg">
         <div className="max-w-xl mx-auto my-8">
           <header className="mb-8">
             <h3 className="text-2xl font-bold ">

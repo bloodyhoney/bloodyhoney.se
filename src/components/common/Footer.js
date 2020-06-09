@@ -10,9 +10,7 @@ function Footer() {
             <div className="flex-1 flex">
               <div>
                 <header className="mb-8">
-                  <h3 className="font-bold text-3xl uppercase">
-                    Bloody Beasts
-                  </h3>
+                  <h3 className="font-bold text-3xl">Bloody Beasts</h3>
                   <h2 className="font-bold text-2xl">and where to find us</h2>
                 </header>
                 <h3 className="font-bold text-xl">Charlotte</h3>

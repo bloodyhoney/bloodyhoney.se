@@ -10,11 +10,21 @@
 body {
   font-family: "Montserrat", sans-serif;
 }
-
+.header-hero {
+  min-height: 80vh;
+}
 p {
   @apply mb-4;
 }
-
+.case-slider-wrapper p a,
+.blogg p a {
+  color: rgba(255, 25, 129, 1);
+  font-weight: bold;
+}
+.case-slider-wrapper p a:hover,
+.blogg p a:hover {
+  text-decoration: underline;
+}
 header {
   z-index: 99999;
 }
@@ -231,8 +241,8 @@ html body [data-ca3_iconfont="ETmodules"]::before {
 .ca3-scroll-down-link {
   /* margin-left: -1.75rem; */
   line-height: 60px;
-  position: absolute;
-  bottom: 0px;
+  position: relative;
+  bottom: -2rem;
   color: rgba(255, 255, 255, 0.5);
   text-align: center;
   font-size: 70px;
