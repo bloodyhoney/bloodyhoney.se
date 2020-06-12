@@ -68,10 +68,10 @@ function Header() {
                   to={link.route}
                   activeClassName="font-bold"
                 >
-                  <span onClick={() => toggleExpansion(!isExpanded)}>
+                  <div onTouchStart={() => toggleExpansion(!isExpanded)}>
                     {" "}
                     {link.title}{" "}
-                  </span>
+                  </div>
                 </AnchorLink>
               ))}
             </Scrollspy>
