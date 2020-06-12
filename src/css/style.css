@@ -335,9 +335,11 @@ html body [data-ca3_iconfont="ETmodules"]::before {
   transition: max-height 0.3s ease-in-out;
 }
 
-.portfolio-item:hover .content,
-.blog-item:hover .content {
-  max-height: 5rem;
+@media (min-width: 768px) {
+  .portfolio-item:hover .content,
+  .blog-item:hover .content {
+    max-height: 5rem;
+  }
 }
 
 .flickity-enabled {

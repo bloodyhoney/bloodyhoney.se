@@ -19,6 +19,7 @@ function portfolioItem({ data }) {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    infinite: false,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
     responsive: [

@@ -68,7 +68,7 @@ function Header() {
                   to={link.route}
                   activeClassName="font-bold"
                 >
-                  <div onTouchStart={() => toggleExpansion(!isExpanded)}>
+                  <div onClick={() => toggleExpansion(!isExpanded)}>
                     {" "}
                     {link.title}{" "}
                   </div>
