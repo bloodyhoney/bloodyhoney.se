@@ -11,12 +11,10 @@ function PortfolioItem({ item }) {
     return str.length > n ? str.substr(0, n - 1) + "&hellip;" : str;
   };
 
-  console.log(trimmedExcerpt);
-
   return (
     <div className="blog-item w-full">
       <Link to={`blogg/${item.node.slug}`}>
-        <div className="relative overflow-hidden group m-4">
+        <div className="relative overflow-hidden group m-0 md:m-4">
           <div>
             <Img
               sizes={{

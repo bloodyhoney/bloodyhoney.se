@@ -18,11 +18,11 @@ function Header() {
           </Link>
 
           <button
-            className="flex items-center block px-3 py-2 text-white border border-white rounded md:hidden"
+            className="flex items-center block px-3 py-2 text-white  md:hidden"
             onClick={() => toggleExpansion(!isExpanded)}
           >
             <svg
-              className="w-3 h-3 fill-current"
+              className="w-6 h-6 fill-current"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -68,7 +68,10 @@ function Header() {
                   to={link.route}
                   activeClassName="font-bold"
                 >
-                  {link.title}
+                  <span onClick={() => toggleExpansion(!isExpanded)}>
+                    {" "}
+                    {link.title}{" "}
+                  </span>
                 </AnchorLink>
               ))}
             </Scrollspy>

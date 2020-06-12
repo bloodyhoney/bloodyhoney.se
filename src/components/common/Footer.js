@@ -4,12 +4,12 @@ import SocialLinks from "../index/SocialLinks";
 function Footer() {
   return (
     <div id="kontakt">
-      <footer className="footer bg-purple-900 text-white pt-8">
-        <div className="footer-inner pb-0 md:pb-24">
+      <footer className="footer text-white">
+        <div className="footer-inner  md:pb-24 ">
           <div className="flex flex-col md:flex-row p-4 pb-16 md:pb-0 mx-auto text-sm  px-8 md:px-16">
             <div className="flex-1 flex">
               <div>
-                <header className="mb-8">
+                <header className="mb-8  pt-4 md:pt-8">
                   <h3 className="font-bold text-3xl">Bloody Beasts</h3>
                   <h2 className="font-bold text-2xl">and where to find us</h2>
                 </header>
@@ -40,12 +40,12 @@ function Footer() {
                 </div>
               </div>
             </div>
-            <div className="flex-1">
+            <div className="flex-1 pt-4 md:pt-8">
               <div className="w-full max-w-2xl">
                 <iframe
                   src="https://snazzymaps.com/embed/236298"
                   width="100%"
-                  height="350px"
+                  height="300px"
                 ></iframe>
               </div>
               <br />
@@ -61,19 +61,25 @@ function Footer() {
           </div>
           <div className="text-sm text-center"> </div>
         </div>
-        <div className="bg-grass py-1">
-          <div className="flex flex-row md:px-16 items-center justify-start pb-2">
-            <div className="flex flex-row items-center">
-              <div className="md:-ml-2">
-                <SocialLinks fill={"#ffffff"} />
-              </div>
-              <div className="text-white font-bold text-center ml-8">
-                &copy; Bloodhoney {new Date().getFullYear()}
-              </div>
+      </footer>
+      <div className="bg-grass py-2 -mt-1">
+        <div className="flex flex-row md:px-16 items-center justify-center md:justify-start pb-2">
+          <div className="flex flex-col md:flex-row items-center pb-2">
+            <div className="md:-ml-2">
+              <SocialLinks fill={"#ffffff"} />
+            </div>
+            <div className="text-white font-bold text-center md:ml-8">
+              &copy; Bloodhoney {new Date().getFullYear()}.
+            </div>
+            <div className="text-white font-normal text-center px-1">
+              Hemsida:{" "}
+              <a href="https://www.olleburlin.se" className="font-bold">
+                Olle Burlin
+              </a>
             </div>
           </div>
         </div>
-      </footer>
+      </div>
     </div>
   );
 }

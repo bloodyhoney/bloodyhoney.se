@@ -21,6 +21,35 @@ function portfolioItem({ data }) {
     slidesToScroll: 1,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1,
+          dots: false,
+        },
+      },
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: false,
+          arrows: false,
+        },
+      },
+    ],
   };
   const portfolio = data.allWordpressWpPortfolio.edges[0].node;
 
@@ -35,7 +64,7 @@ function portfolioItem({ data }) {
         style={{ backgroundColor: portfolio.acf.bakgrundsfarg_01 }}
       >
         <div className="flex flex-wrap flex-col w-full">
-          <div className="w-full px-24 pt-8 pb-8 ">
+          <div className="w-full md:px-24 pt-8 pb-8 ">
             <Slider {...settings}>
               {/* Slide 1 */}
               {portfolio.acf.video01 || portfolio.acf.bild02 ? (

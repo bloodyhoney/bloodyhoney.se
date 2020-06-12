@@ -59,6 +59,7 @@ function BlogCarousel() {
           slidesToShow: 2,
           slidesToScroll: 2,
           initialSlide: 2,
+          dots: false,
         },
       },
       {
@@ -66,24 +67,29 @@ function BlogCarousel() {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          dots: false,
+          arrows: false,
         },
       },
     ],
   };
   return (
     <div className="py-8 bg-black">
-      <div className="text-white text-center pb-2 text-3xl font-bold">
-        Bloody Blogg
+      <div className="flex flex-row flex-wrap justify-between items-center">
+        <div className="text-white text-center md:text-left w-full md:w-auto md:pl-20 pb-2 text-3xl font-bold">
+          Bloody Blogg
+        </div>
+        <div className="flex flex-row flex-wrap text-center justify-center pb-4 md:pb-0 text-gray-500 md:pr-16 text-sm w-full md:w-auto">
+          <Link to={"/blogg"}>Visa alla inlägg &rarr;</Link>
+        </div>
       </div>
-      <div className="px-16 mx-auto pb-4">
+
+      <div className="px-4 md:px-16 mx-auto pb-4">
         <Slider {...settings}>
           {posts.map((item, index) => {
             return <BlogCarouselPost key={index} item={item} />;
           })}
         </Slider>
-        <div className="flex flex-row flex-wrap justify-end text-gray-500 pr-4 text-sm">
-          <Link to={"/blogg"}>Visa alla inlägg &rarr;</Link>
-        </div>
       </div>
     </div>
   );
@@ -92,7 +98,7 @@ function BlogCarousel() {
 function NextArrow(props) {
   const { onClick } = props;
   return (
-    <button onClick={onClick} className="w-16 next hover:opacity-75">
+    <button onClick={onClick} className="w-8 md:w-16 next hover:opacity-75">
       <svg
         version="1.1"
         id="Capa_1"
@@ -114,7 +120,7 @@ function NextArrow(props) {
 function PrevArrow(props) {
   const { onClick } = props;
   return (
-    <button onClick={onClick} className="w-16 prev hover:opacity-75 ">
+    <button onClick={onClick} className="w-8 md:w-16 prev hover:opacity-75 ">
       <svg
         version="1.1"
         id="Layer_1"

@@ -48,6 +48,7 @@ a.more-link {
 
 footer.footer {
   background: url("images/footer-texture.jpg") repeat-x;
+  background-size: cover;
 }
 
 .footer-inner {
