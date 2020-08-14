@@ -17,7 +17,7 @@ p {
   @apply mb-4;
 }
 .case-slider-wrapper p a,
-.blogg p a {
+.blogg main p a {
   color: rgba(255, 25, 129, 1);
   font-weight: bold;
 }

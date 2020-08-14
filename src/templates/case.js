@@ -39,7 +39,7 @@ function portfolioItem({ data }) {
           slidesToScroll: 1,
           initialSlide: 1,
           infinite: false,
-          dots: false,
+          dots: true,
         },
       },
       {
@@ -47,7 +47,7 @@ function portfolioItem({ data }) {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          dots: false,
+          dots: true,
           arrows: false,
           infinite: false,
         },
