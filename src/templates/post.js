@@ -23,9 +23,6 @@ function newsItemTemplate({ data }) {
                 <div dangerouslySetInnerHTML={{ __html: news.title }} />
               </Link>
             </h3>
-            <div>
-              <date>{news.date}</date>
-            </div>
           </header>
 
           <div>

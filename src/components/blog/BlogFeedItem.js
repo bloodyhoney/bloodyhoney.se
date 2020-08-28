@@ -17,7 +17,7 @@ function BlogFeedItem({ post }) {
               }}
             />
           </div>
-          <div className="text-sm text-gray-500">{blogg.date}</div>
+
           <div className="font-bold my-2">
             {" "}
             <div dangerouslySetInnerHTML={{ __html: blogg.title }}></div>
