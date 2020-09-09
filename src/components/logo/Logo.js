@@ -13,7 +13,7 @@ const defaultOptions = {
 
 function Logo() {
   return (
-    <div>
+    <div className="w-full">
       <Lottie options={defaultOptions} />
     </div>
   );

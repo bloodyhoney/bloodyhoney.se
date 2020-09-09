@@ -1,7 +1,7 @@
 import { Link } from "gatsby";
 import React, { useState } from "react";
 import Logo from "./logo/Logo";
-import { AnchorLink } from "gatsby-plugin-anchor-links";
+
 import Scrollspy from "react-scrollspy";
 import Headroom from "react-headroom";
 function Header() {
@@ -62,14 +62,14 @@ function Header() {
                   title: `Kontakt`,
                 },
               ].map((link) => (
-                <AnchorLink
+                <Link
                   className="block mt-4 text-white no-underline md:inline-block md:mt-0 md:ml-6"
                   key={link.title}
                   to={link.route}
                   activeClassName="font-bold"
                 >
                   <div> {link.title} </div>
-                </AnchorLink>
+                </Link>
               ))}
             </Scrollspy>
           </nav>

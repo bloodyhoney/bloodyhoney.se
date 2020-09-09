@@ -92,7 +92,7 @@ exports.createPages = ({ actions, graphql }) => {
     .then(() => {
       return graphql(`
         {
-          allWordpressPost(limit: 50) {
+          allWordpressPost {
             edges {
               node {
                 id
