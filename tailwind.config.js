@@ -12,6 +12,7 @@ module.exports = {
         "screen/4": "calc(100vh / 4)",
         "screen/5": "calc(100vh / 5)",
         "screen-80": "80vh",
+        "screen-90": "90vh",
       }),
       colors: {
         grass: `#1a8642`,

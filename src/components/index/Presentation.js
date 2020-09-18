@@ -15,8 +15,8 @@ function Presentation() {
     slidesToScroll: 1,
   };
   return (
-    <div className="md:flex testimonials">
-      <div className="flex items-center md:w-1/2 p-4 md:p-16 mango-gradient text-yellow-400">
+    <div className="lg:flex testimonials">
+      <div className="flex items-center lg:w-1/2 p-4 md:p-16 mango-gradient text-yellow-400">
         <div className="">
           <header id="om">
             <div className="text-xl">Det här är</div>
@@ -48,7 +48,7 @@ function Presentation() {
           </div>
         </div>
       </div>
-      <div className="flex flex-wrap items-center justify-center justify-center md:w-1/2 p-8 md:p-8 bg-gray-900 box text-gray-600">
+      <div className="flex flex-wrap items-center justify-center lg:w-1/2 p-8 md:p-8 bg-gray-900 box text-gray-600">
         <div className="w-full">
           <Slider {...settings}>
             <div className="text-center">

@@ -8,7 +8,7 @@ import Hero from "./index/Hero";
 function LayoutFront({ children }) {
   return (
     <div>
-      <div className="flex flex-col font-sans text-gray-900 h-screen">
+      <div className="flex flex-col font-sans text-gray-900 h-screen-90">
         <div>
           <Header />
         </div>

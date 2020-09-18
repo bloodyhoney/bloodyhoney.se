@@ -31,7 +31,9 @@ function Hero() {
               Kontakt
             </AnchorLink>
           </div>
-          <div className="ca3-scroll-down-link ca3-scroll-down-arrow w-16 h-16 text-center mx-auto"></div>
+          <AnchorLink to={`/#portfolio`}>
+            <div className="ca3-scroll-down-link ca3-scroll-down-arrow w-16 h-16 text-center mx-auto"></div>
+          </AnchorLink>
         </div>
       </div>
     </div>

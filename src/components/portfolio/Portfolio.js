@@ -5,10 +5,7 @@ import PortfolioItem from "./PortfolioItem";
 const Portfolio = () => {
   const data = useStaticQuery(graphql`
     {
-      allWordpressWpPortfolio(
-        limit: 8
-        sort: { fields: acf___case_kategori___term_order }
-      ) {
+      allWordpressWpPortfolio(limit: 8) {
         edges {
           node {
             title
