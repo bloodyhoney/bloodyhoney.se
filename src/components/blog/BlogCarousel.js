@@ -80,7 +80,7 @@ function BlogCarousel() {
           Bloody Blogg
         </div>
         <div className="flex flex-row flex-wrap text-center justify-center pb-4 md:pb-0 text-gray-500 md:pr-16 text-sm w-full md:w-auto">
-          <Link to={"/"}>Visa alla inlägg &rarr;</Link>
+          <Link to={"/blogg"}>Visa alla inlägg &rarr;</Link>
         </div>
       </div>
 

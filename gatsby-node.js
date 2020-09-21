@@ -138,7 +138,7 @@ exports.createPages = ({ actions, graphql }) => {
         createPage,
         items: posts,
         itemsPerPage: 9,
-        pathPrefix: ({ pageNumber }) => (pageNumber === 0 ? `/` : `/page`),
+        pathPrefix: ({ pageNumber }) => (pageNumber === 0 ? `/blogg` : `/page`),
         component: blogTemplate,
       });
     });
