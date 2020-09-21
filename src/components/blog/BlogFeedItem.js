@@ -7,7 +7,7 @@ function BlogFeedItem({ post }) {
   const blogg = post.node;
   return (
     <div>
-      <Link to={`${blogg.slug}`}>
+      <Link to={`/blogg/${blogg.slug}`}>
         <div className="group">
           <div className="mb-4">
             <Img
