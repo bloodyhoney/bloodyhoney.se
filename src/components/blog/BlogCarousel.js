@@ -75,6 +75,7 @@ function BlogCarousel() {
   };
   return (
     <div className="py-8 bg-black">
+      <a name="blogg" />
       <div className="flex flex-row flex-wrap justify-between items-center">
         <div className="text-white text-center md:text-left w-full md:w-auto md:pl-20 pb-2 text-3xl font-bold">
           Bloody Blogg

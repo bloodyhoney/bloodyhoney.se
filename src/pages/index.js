@@ -20,7 +20,7 @@ function IndexPage() {
       <section>
         <Presentation />
       </section>
-      <section id="#blogg" className="relative">
+      <section className="relative">
         <BlogCarousel />
       </section>
     </LayoutFront>
