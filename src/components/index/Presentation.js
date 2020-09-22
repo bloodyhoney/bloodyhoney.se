@@ -1,19 +1,7 @@
 import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+
+import Quotes from "./Quotes";
 function Presentation() {
-  var settings = {
-    dots: false,
-    arrows: false,
-    infinite: true,
-    autoplay: true,
-    fade: true,
-    autoplaySpeed: 4000,
-    speed: 800,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
   return (
     <div className="lg:flex testimonials">
       <div className="flex items-center lg:w-1/2 p-4 md:p-16 mango-gradient text-yellow-400">
@@ -48,33 +36,9 @@ function Presentation() {
           </div>
         </div>
       </div>
-      <div className="flex flex-wrap items-center justify-center lg:w-1/2 p-8 md:p-8 bg-gray-900 box text-gray-600">
+      <div className="flex-1 flex flex-wrap items-center justify-center lg:w-1/2 p-8 md:p-8 bg-gray-900 box text-gray-600">
         <div className="w-full">
-          <Slider {...settings}>
-            <div className="text-center">
-              <header>
-                <h3 className="text-6xl font-bold text-yellow-400">&rdquo;</h3>
-              </header>
-              <div className="text-pink-500 font-bold text-xl md:text-3xl mb-6 italic">
-                Bloody Honey är helt enkelt världens bästa produktionsbolag
-              </div>
-              <div className="text-xl md:text-2xl text-yellow-400">
-                - Sveriges Television
-              </div>
-            </div>
-            <div className="text-center">
-              <header>
-                <h3 className="text-6xl font-bold text-yellow-400">&rdquo;</h3>
-              </header>
-              <div className="text-pink-500 font-bold text-xl md:text-3xl mb-6 italic">
-                Vi är supernöjda med Bloody Honey
-              </div>
-              <div className="text-xl md:text-2xl text-yellow-400">
-                - Netflix
-              </div>
-              <span id="blogg"></span>
-            </div>
-          </Slider>
+          <Quotes />
         </div>
       </div>
     </div>
