@@ -11,9 +11,10 @@ function PortfolioItem({ item }) {
           <div className="z-10 overlay-effect h-100 w-100"></div>
           <div className="">
             <Img
-              fluid={
-                item.node.featuredImage.node.localFile.childImageSharp.fluid
-              }
+              sizes={{
+                ...item.node.featuredImage.node.localFile.childImageSharp.fluid,
+                aspectRatio: 16 / 9,
+              }}
             />
           </div>
           <div className="info-box z-20 uppercase absolute bottom-0 left-0 w-full bg-pink-600 bg-opacity-75 text-white block px-4">

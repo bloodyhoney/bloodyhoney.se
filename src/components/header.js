@@ -10,8 +10,11 @@ function Header() {
 
   return (
     <Headroom>
-      <header id="#top" className="bg-black bg-opacity-75">
-        <div className="flex flex-wrap items-center justify-between p-4 mx-auto md:py-2 uppercase md:px-8">
+      <header className="bg-black bg-opacity-75">
+        <div
+          id="top"
+          className="flex flex-wrap items-center justify-between p-4 mx-auto md:py-2 uppercase md:px-8"
+        >
           <Link to="/">
             <div className="w-48 -mb-2">
               <Logo />
@@ -43,7 +46,7 @@ function Header() {
             >
               {[
                 {
-                  route: `/`,
+                  route: `/#topp`,
                   title: `Topp`,
                 },
                 {

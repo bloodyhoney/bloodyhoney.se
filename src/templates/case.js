@@ -54,7 +54,7 @@ function portfolioItem({ data }) {
       },
     ],
   };
-  const portfolio = data.allWordpressWpPortfolio.edges[0].node;
+  const portfolio = data.allWpCase.edges[0].node;
 
   return (
     <Layout>
@@ -64,39 +64,39 @@ function portfolioItem({ data }) {
       />
       <section
         className="case-slider-wrapper"
-        style={{ backgroundColor: portfolio.acf.bakgrundsfarg_01 }}
+        style={{ backgroundColor: portfolio.caseInfo.bakgrundsfarg_01 }}
       >
         <div className="flex flex-wrap flex-col w-full">
           <div className="w-full md:px-24 pt-8 pb-8 ">
             <Slider {...settings}>
               {/* Slide 1 */}
-              {portfolio.acf.video01 || portfolio.acf.bild02 ? (
+              {portfolio.caseInfo.video01 || portfolio.caseInfo.bild02 ? (
                 <div className="w-full">
                   <CaseSlide
-                    video={portfolio.acf.video01}
-                    text={portfolio.acf.bild02}
+                    video={portfolio.caseInfo.video01}
+                    text={portfolio.caseInfo.bild02}
                   />
                 </div>
               ) : (
                 ""
               )}
               {/* Slide 2 */}
-              {portfolio.acf.video02 || portfolio.acf.bild02 ? (
+              {portfolio.caseInfo.video02 || portfolio.caseInfo.bild02 ? (
                 <div className="w-full">
                   <CaseSlide
-                    video={portfolio.acf.video02}
-                    text={portfolio.acf.bild02}
+                    video={portfolio.caseInfo.video02}
+                    text={portfolio.caseInfo.bild02}
                   />
                 </div>
               ) : (
                 ""
               )}
               {/* Slide 3 */}
-              {portfolio.acf.video03 || portfolio.acf.bild03 ? (
+              {portfolio.caseInfo.video03 || portfolio.caseInfo.bild03 ? (
                 <div className="w-full">
                   <CaseSlide
-                    video={portfolio.acf.video03}
-                    text={portfolio.acf.bild03}
+                    video={portfolio.caseInfo.video03}
+                    text={portfolio.caseInfo.bild03}
                   />
                 </div>
               ) : (
