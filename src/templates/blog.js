@@ -45,20 +45,18 @@ BlogPage.propTypes = {
 
 export const pageQuery = graphql`
   query BlogQuery($limit: Int!, $skip: Int!) {
-    allWordpressPost(
-      sort: { fields: date, order: DESC }
-      limit: $limit
-      skip: $skip
-    ) {
+    allWpPost(sort: { fields: date, order: DESC }, limit: $limit, skip: $skip) {
       edges {
         node {
           title
           excerpt
-          featured_media {
-            localFile {
-              childImageSharp {
-                fluid(maxWidth: 600, quality: 70) {
-                  ...GatsbyImageSharpFluid
+          featuredImage {
+            node {
+              localFile {
+                childImageSharp {
+                  fluid(maxWidth: 600, quality: 70) {
+                    ...GatsbyImageSharpFluid
+                  }
                 }
               }
             }
@@ -66,7 +64,6 @@ export const pageQuery = graphql`
           slug
           date(formatString: "Do MMMM  YYYY", locale: "Sv")
           content
-          wordpress_id
         }
       }
     }

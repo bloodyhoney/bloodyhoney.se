@@ -174,10 +174,10 @@ export default portfolioItem;
 
 export const query = graphql`
   query($slug: String!) {
-    allWordpressWpPortfolio(filter: { slug: { eq: $slug } }) {
+    allWpCase(filter: { slug: { eq: $slug } }) {
       edges {
         node {
-          acf {
+          caseInfo {
             bild01
             bild02
             bild03
@@ -188,14 +188,16 @@ export const query = graphql`
             video03
             video04
             video05
-            bakgrundsfarg_01
+            bakgrundsfarg01
           }
           title
-          featured_media {
-            localFile {
-              childImageSharp {
-                fluid(maxWidth: 1000, quality: 70) {
-                  ...GatsbyImageSharpFluid
+          featuredImage {
+            node {
+              localFile {
+                childImageSharp {
+                  fluid(maxWidth: 1000, quality: 70) {
+                    ...GatsbyImageSharpFluid
+                  }
                 }
               }
             }
@@ -203,7 +205,7 @@ export const query = graphql`
           slug
           date(formatString: "MMMM Do, Y")
           content
-          wordpress_id
+          id
         }
       }
     }

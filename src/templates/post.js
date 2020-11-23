@@ -38,15 +38,17 @@ export default newsItemTemplate;
 
 export const query = graphql`
   query($slug: String!) {
-    allWordpressPost(limit: 10, filter: { slug: { eq: $slug } }) {
+    allWpPost(limit: 10, filter: { slug: { eq: $slug } }) {
       edges {
         node {
           title
-          featured_media {
-            localFile {
-              childImageSharp {
-                fluid(maxWidth: 600, quality: 70) {
-                  ...GatsbyImageSharpFluid
+          featuredImage {
+            node {
+              localFile {
+                childImageSharp {
+                  fluid(maxWidth: 600, quality: 70) {
+                    ...GatsbyImageSharpFluid
+                  }
                 }
               }
             }
@@ -54,7 +56,7 @@ export const query = graphql`
           slug
           date(formatString: "MMMM Do, Y")
           content
-          wordpress_id
+          id
         }
       }
     }

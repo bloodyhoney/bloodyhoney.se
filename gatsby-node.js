@@ -11,7 +11,7 @@ exports.createPages = ({ actions, graphql }) => {
 
   return graphql(`
     {
-      allWordpressPage {
+      allWpPage {
         edges {
           node {
             id
@@ -34,7 +34,7 @@ exports.createPages = ({ actions, graphql }) => {
       // excludes drafts, future posts, etc. They will appear in development,
       // but not in a production build.
 
-      const allPages = result.data.allWordpressPage.edges;
+      const allPages = result.data.allWpPage.edges;
       const pages =
         process.env.NODE_ENV === "production"
           ? getOnlyPublished(allPages)
@@ -54,7 +54,7 @@ exports.createPages = ({ actions, graphql }) => {
     .then(() => {
       return graphql(`
         {
-          allWordpressWpPortfolio {
+          allWpCase {
             edges {
               node {
                 id
@@ -75,24 +75,21 @@ exports.createPages = ({ actions, graphql }) => {
       const caseTemplate = path.resolve(`./src/templates/case.js`);
 
       // Create an Artist for each WordPress Artist
-      _.each(
-        result.data.allWordpressWpPortfolio.edges,
-        ({ node: portfolioItem }) => {
-          createPage({
-            path: `/portfolio/${portfolioItem.slug}/`,
-            component: caseTemplate,
-            context: {
-              slug: portfolioItem.slug,
-            },
-          });
-        }
-      );
+      _.each(result.data.allWpCase.edges, ({ node: portfolioItem }) => {
+        createPage({
+          path: `/portfolio/${portfolioItem.slug}/`,
+          component: caseTemplate,
+          context: {
+            slug: portfolioItem.slug,
+          },
+        });
+      });
     })
 
     .then(() => {
       return graphql(`
         {
-          allWordpressPost {
+          allWpPost {
             edges {
               node {
                 id
@@ -114,7 +111,7 @@ exports.createPages = ({ actions, graphql }) => {
       const blogTemplate = path.resolve(`./src/templates/blog.js`);
 
       // In production builds, filter for only published posts.
-      const allPosts = result.data.allWordpressPost.edges;
+      const allPosts = result.data.allWpPost.edges;
       const posts =
         process.env.NODE_ENV === "production"
           ? getOnlyPublished(allPosts)

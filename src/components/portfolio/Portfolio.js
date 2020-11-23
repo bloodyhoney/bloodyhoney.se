@@ -5,22 +5,19 @@ import PortfolioItem from "./PortfolioItem";
 const Portfolio = () => {
   const data = useStaticQuery(graphql`
     {
-      allWordpressWpPortfolio(limit: 8) {
+      allWpCase(limit: 8) {
         edges {
           node {
             title
             slug
-            acf {
-              case_kategori {
-                name
-                slug
-              }
-            }
-            featured_media {
-              localFile {
-                childImageSharp {
-                  fluid(maxWidth: 600, quality: 70) {
-                    ...GatsbyImageSharpFluid_withWebp
+
+            featuredImage {
+              node {
+                localFile {
+                  childImageSharp {
+                    fluid {
+                      ...GatsbyImageSharpFluid
+                    }
                   }
                 }
               }
@@ -34,7 +31,7 @@ const Portfolio = () => {
   return (
     <>
       <div className="w-full parent">
-        {data.allWordpressWpPortfolio.edges.map((item, index) => {
+        {data.allWpCase.edges.map((item, index) => {
           return <PortfolioItem key={index} item={item} />;
         })}
       </div>

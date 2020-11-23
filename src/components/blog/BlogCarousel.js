@@ -9,23 +9,24 @@ import BlogCarouselPost from "../blog/BlogCarouselPost";
 function BlogCarousel() {
   const data = useStaticQuery(graphql`
     {
-      allWordpressPost(limit: 12) {
+      allWpPost(limit: 12) {
         edges {
           node {
-            wordpress_id
+            id
             title
             status
             slug
             excerpt
-            featured_media {
-              localFile {
-                childImageSharp {
-                  fluid {
-                    ...GatsbyImageSharpFluid
+            featuredImage {
+              node {
+                localFile {
+                  childImageSharp {
+                    fluid {
+                      ...GatsbyImageSharpFluid
+                    }
                   }
                 }
               }
-              wordpress_id
             }
           }
         }
@@ -33,7 +34,7 @@ function BlogCarousel() {
     }
   `);
 
-  const posts = data.allWordpressPost.edges;
+  const posts = data.allWpPost.edges;
 
   var settings = {
     dots: true,

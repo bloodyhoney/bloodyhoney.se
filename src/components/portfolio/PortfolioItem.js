@@ -11,25 +11,25 @@ function PortfolioItem({ item }) {
           <div className="z-10 overlay-effect h-100 w-100"></div>
           <div className="">
             <Img
-              sizes={{
-                ...item.node.featured_media.localFile.childImageSharp.fluid,
-                aspectRatio: 16 / 9,
-              }}
+              fluid={
+                item.node.featuredImage.node.localFile.childImageSharp.fluid
+              }
             />
           </div>
           <div className="info-box z-20 uppercase absolute bottom-0 left-0 w-full bg-pink-600 bg-opacity-75 text-white block px-4">
             <div className="portfolio-title">
               <h2 className="font-bold text-lg pt-2 pb-1">
-                <div
+                {/* <div
                   dangerouslySetInnerHTML={{
-                    __html: item.node.acf.case_kategori[0].name,
+                    __html: item.node.caseInfo.case_kategori.name,
                   }}
-                ></div>
+                ></div> */}
+                Kategorinamn
               </h2>
             </div>
             <div className="content">
               <div className="capitalize text-sm pt-1 pb-2">
-                Film & TV motion graphics till Barn, dokumentärt och långfilm{" "}
+                Film / TV motion graphics till Barn, dokumentärt och långfilm{" "}
               </div>
             </div>
           </div>

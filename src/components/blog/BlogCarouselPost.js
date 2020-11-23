@@ -18,7 +18,7 @@ function PortfolioItem({ item }) {
           <div>
             <Img
               sizes={{
-                ...item.node.featured_media.localFile.childImageSharp.fluid,
+                ...item.node.featuredImage.node.localFile.childImageSharp.fluid,
                 aspectRatio: 16 / 9,
               }}
             />

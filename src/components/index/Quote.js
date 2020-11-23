@@ -2,7 +2,7 @@ import React from "react";
 
 function Quote({ quote }) {
   const title = quote.node.title;
-  const citat = quote.node.acf.innehall;
+  const citat = quote.node.citat.innehall;
   return (
     <div className="text-center">
       <header>

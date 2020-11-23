@@ -19,21 +19,21 @@ function Quotes() {
   };
   const data = useStaticQuery(graphql`
     {
-      allWordpressWpCitat {
+      allWpQuote {
         edges {
           node {
             id
             title
-            acf {
-              innehall
+            citat {
               extrainfo
+              innehall
             }
           }
         }
       }
     }
   `);
-  const quotes = data.allWordpressWpCitat.edges;
+  const quotes = data.allWpQuote.edges;
   console.log(data);
   return (
     <Slider {...settings}>
