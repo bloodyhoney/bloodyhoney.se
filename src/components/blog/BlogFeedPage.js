@@ -9,7 +9,7 @@ function BlogFeedPage({ posts }) {
     <div className="max-w-6xl mx-auto mt-16 px-4">
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
         {posts.map((post) => {
-          return <BlogFeedItem key={post.node.wordpress_id} post={post} />;
+          return <BlogFeedItem key={post.node.id} post={post} />;
         })}
       </div>
     </div>

@@ -6,7 +6,7 @@ import Layout from "../components/layout";
 import { Link, graphql } from "gatsby";
 
 function newsItemTemplate({ data }) {
-  let news = data.allWordpressPost.edges[0].node;
+  let news = data.allWpPost.edges[0].node;
   console.log(news);
   return (
     <Layout>

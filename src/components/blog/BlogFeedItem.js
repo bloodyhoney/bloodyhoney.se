@@ -12,7 +12,7 @@ function BlogFeedItem({ post }) {
           <div className="mb-4">
             <Img
               sizes={{
-                ...blogg.featured_media.localFile.childImageSharp.fluid,
+                ...blogg.featuredImage.node.localFile.childImageSharp.fluid,
                 aspectRatio: 16 / 9,
               }}
             />

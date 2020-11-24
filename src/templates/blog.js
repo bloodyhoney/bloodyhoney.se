@@ -10,7 +10,7 @@ import SEO from "../components/seo";
 
 function BlogPage(props) {
   const { data, pageContext } = props;
-  const { edges: posts } = data.allWordpressPost;
+  const { edges: posts } = data.allWpPost;
 
   return (
     <div className="blogg">
@@ -33,7 +33,7 @@ export default BlogPage;
 
 BlogPage.propTypes = {
   data: PropTypes.shape({
-    allWordpressPost: PropTypes.shape({
+    allWpPost: PropTypes.shape({
       edges: PropTypes.array,
     }),
   }),
@@ -48,6 +48,7 @@ export const pageQuery = graphql`
     allWpPost(sort: { fields: date, order: DESC }, limit: $limit, skip: $skip) {
       edges {
         node {
+          id
           title
           excerpt
           featuredImage {
