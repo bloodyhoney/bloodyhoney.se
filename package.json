@@ -5,6 +5,7 @@
   "author": "Taylor Bryant <taylor@bryant.io>",
   "dependencies": {
     "@farbenmeer/react-spring-slider": "^1.1.1",
+    "cross-env": "^7.0.2",
     "flickity": "^2.2.1",
     "flickity-fade": "^1.0.0",
     "gatsby": "^2.27.0",
@@ -48,7 +49,7 @@
     "fix:lint": "eslint --ext .jsx --ext .js . --fix",
     "fix:prettier": "prettier --write \"**/*.{css,js,jsx,json,md}\"",
     "fix": "npm run fix:lint && npm run fix:prettier",
-    "build": "gatsby build",
+    "build": "cross-env GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
     "develop": "gatsby develop",
     "dev": "npm run develop",
     "start": "npm run develop",
