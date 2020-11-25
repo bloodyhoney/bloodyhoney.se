@@ -78,10 +78,6 @@ query SINGLE_CONTENT_QUERY($id: ID!) {
     title
     toPing
     uri
-    ytterligareInfo {
-      blurb
-      fieldGroupName
-    }
     __typename
   }
 }

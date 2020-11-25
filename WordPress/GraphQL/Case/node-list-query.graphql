@@ -12,18 +12,6 @@ query NODE_LIST_QUERY($first: Int!, $after: String) {
         bild03
         bild04
         bild05
-        caseKategori2 {
-          __typename
-          ... on Category {
-            id
-          }
-          ... on Tag {
-            id
-          }
-          ... on PostFormat {
-            id
-          }
-        }
         fieldGroupName
         textfarg01
         textfarg02
@@ -99,6 +87,11 @@ query NODE_LIST_QUERY($first: Int!, $after: String) {
       }
       title
       uri
+      ytterligareInfo {
+        blurb
+        fieldGroupName
+        omrade
+      }
       __typename
     }
     pageInfo {

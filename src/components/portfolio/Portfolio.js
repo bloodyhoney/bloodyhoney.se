@@ -10,7 +10,10 @@ const Portfolio = () => {
           node {
             title
             slug
-
+            ytterligareInfo {
+              omrade
+              blurb
+            }
             featuredImage {
               node {
                 localFile {

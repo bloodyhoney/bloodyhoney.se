@@ -79,10 +79,6 @@ query NODE_LIST_QUERY($first: Int!, $after: String) {
       title
       toPing
       uri
-      ytterligareInfo {
-        blurb
-        fieldGroupName
-      }
       __typename
     }
     pageInfo {

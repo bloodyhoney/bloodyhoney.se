@@ -8,7 +8,7 @@ function Footer() {
         <div className="footer-inner  md:pb-24 ">
           <div className="flex flex-col md:flex-row p-4 pb-16 md:pb-0 mx-auto text-sm  px-8 md:px-16">
             <div className="flex-1 flex">
-              <div>
+              <div className="pb-8">
                 <header className="mb-8  pt-4 md:pt-8">
                   <h3 className="font-bold text-3xl">Bloody Beasts</h3>
                   <h2 className="font-bold text-2xl">and where to find us</h2>

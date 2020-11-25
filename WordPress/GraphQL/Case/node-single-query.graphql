@@ -11,18 +11,6 @@ query SINGLE_CONTENT_QUERY($id: ID!) {
       bild03
       bild04
       bild05
-      caseKategori2 {
-        __typename
-        ... on Category {
-          id
-        }
-        ... on Tag {
-          id
-        }
-        ... on PostFormat {
-          id
-        }
-      }
       fieldGroupName
       textfarg01
       textfarg02
@@ -98,6 +86,11 @@ query SINGLE_CONTENT_QUERY($id: ID!) {
     }
     title
     uri
+    ytterligareInfo {
+      blurb
+      fieldGroupName
+      omrade
+    }
     __typename
   }
 }

@@ -17,20 +17,15 @@ function PortfolioItem({ item }) {
               }}
             />
           </div>
-          <div className="info-box z-20 uppercase absolute bottom-0 left-0 w-full bg-pink-600 bg-opacity-75 text-white block px-4">
+          <div className="info-box z-20 uppercase absolute bottom-0 left-0 w-full  text-white block px-4">
             <div className="portfolio-title">
               <h2 className="font-bold text-lg pt-2 pb-1">
-                {/* <div
-                  dangerouslySetInnerHTML={{
-                    __html: item.node.caseInfo.case_kategori.name,
-                  }}
-                ></div> */}
-                Kategorinamn
+                {item.node.ytterligareInfo?.omrade}
               </h2>
             </div>
             <div className="content">
               <div className="capitalize text-sm pt-1 pb-2">
-                Film / TV motion graphics till Barn, dokumentärt och långfilm{" "}
+                {item.node.ytterligareInfo?.blurb}
               </div>
             </div>
           </div>
