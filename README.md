@@ -18,7 +18,7 @@
   
 <p align="center">View demo <a href="https://gatsby-starter-tailwind.oddstronaut.com/">here</a>.</p>
 
-## What is Tailwind CSS?
+## What is Tailwind CSS
 
 > "Tailwind CSS is a utility-first CSS framework for rapidly building custom user interfaces."
 > –[Tailwind CSS](https://tailwindcss.com)

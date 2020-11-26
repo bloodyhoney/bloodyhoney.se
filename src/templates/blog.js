@@ -16,7 +16,7 @@ function BlogPage(props) {
     <div className="blogg">
       <Layout>
         <SEO
-          keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
+          keywords={[`Bloodey Honey`, `tailwind`, `react`, `tailwindcss`]}
           title="Bloody Honey"
         />
 
