@@ -13,7 +13,7 @@ function PortfolioItem({ item }) {
 
   return (
     <div className="blog-item w-full">
-      <Link to={`/${item.node.slug}`}>
+      <Link to={`/blogg/${item.node.slug}`}>
         <div className="relative overflow-hidden group m-0 md:m-4">
           <div>
             <Img
