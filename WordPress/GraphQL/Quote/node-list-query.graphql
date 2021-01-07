@@ -2,7 +2,6 @@ query NODE_LIST_QUERY($first: Int!, $after: String) {
   quotes(first: $first, after: $after) {
     nodes {
       citat {
-        extrainfo
         fieldGroupName
         innehall
       }

@@ -1,7 +1,6 @@
 query PREVIEW_QUERY($id: ID!) {
   quote(id: $id, idType: ID, asPreview: true) {
     citat {
-      extrainfo
       fieldGroupName
       innehall
     }

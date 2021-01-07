@@ -25,7 +25,6 @@ function Quotes() {
             id
             title
             citat {
-              extrainfo
               innehall
             }
           }

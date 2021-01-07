@@ -1,7 +1,6 @@
 query SINGLE_CONTENT_QUERY($id: ID!) {
   quote(id: $id) {
     citat {
-      extrainfo
       fieldGroupName
       innehall
     }
