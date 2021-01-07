@@ -50,7 +50,8 @@ module.exports = {
       resolve: `gatsby-source-wordpress-experimental`,
       options: {
         url:
-          process.env.WPGRAPHQL_URL || `http://olleburl.in/bloodyhoney/graphql`,
+          process.env.WPGRAPHQL_URL ||
+          `https://olleburl.in/bloodyhoney/graphql`,
         verbose: true,
         develop: {
           hardCacheMediaFiles: true,
