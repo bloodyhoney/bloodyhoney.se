@@ -70,11 +70,11 @@ function portfolioItem({ data }) {
           <div className="w-full md:px-24 pt-8 pb-8 ">
             <Slider {...settings}>
               {/* Slide 1 */}
-              {portfolio.caseInfo.video01 || portfolio.caseInfo.bild02 ? (
+              {portfolio.caseInfo.video01 || portfolio.caseInfo.bild01 ? (
                 <div className="w-full">
                   <CaseSlide
                     video={portfolio.caseInfo.video01}
-                    text={portfolio.caseInfo.bild02}
+                    text={portfolio.caseInfo.bild01}
                   />
                 </div>
               ) : (

@@ -23,12 +23,15 @@ p {
 .blogg p a:hover {
   text-decoration: underline;
 }
-header {
-  z-index: 99999;
-}
-
+header,
 .headroom {
-  z-index: 100 !important;
+  z-index: 99999 !important;
+}
+.headroom--unfixed header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
 }
 
 .mango-gradient {

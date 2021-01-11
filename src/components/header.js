@@ -2,15 +2,14 @@ import { Link } from "gatsby";
 import React, { useState } from "react";
 import Logo from "./logo/Logo";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
-
-import Scrollspy from "react-scrollspy";
 import Headroom from "react-headroom";
+import Scrollspy from "react-scrollspy";
 function Header() {
   const [isExpanded, toggleExpansion] = useState(false);
 
   return (
     <Headroom>
-      <header className="bg-black bg-opacity-75">
+      <header className="bg-black bg-opacity-75 ">
         <div
           id="top"
           className="flex flex-wrap items-center justify-between p-4 mx-auto md:py-2 uppercase md:px-8"
