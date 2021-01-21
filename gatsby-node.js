@@ -11,7 +11,7 @@ exports.createPages = ({ actions, graphql }) => {
 
   return graphql(`
     {
-      allWpCase {
+      allWpCase(limit: 8) {
         edges {
           node {
             id
@@ -45,7 +45,7 @@ exports.createPages = ({ actions, graphql }) => {
     .then(() => {
       return graphql(`
         {
-          allWpPost {
+          allWpPost(limit: 50) {
             edges {
               node {
                 id

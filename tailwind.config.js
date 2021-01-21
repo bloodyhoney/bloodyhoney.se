@@ -40,5 +40,7 @@ module.exports = {
     ],
   },
   // https://github.com/tailwindcss/custom-forms
-  plugins: [require("@tailwindcss/custom-forms")],
+  plugins: [
+    require("@tailwindcss/custom-forms", require("@tailwindcss/aspect-ratio")),
+  ],
 };

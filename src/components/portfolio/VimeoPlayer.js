@@ -3,8 +3,6 @@
 import React from "react";
 
 function VimeoPlayer({ id }) {
-  console.log(id);
-
   return (
     <div className="embed-container w-full h-full">
       <iframe

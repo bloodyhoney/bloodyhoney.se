@@ -77,6 +77,9 @@ footer.footer {
   opacity: 1;
   filter: grayscale(100);
 } */
+ul[data-name="carouselWrapper"] {
+  min-height: 75vh !important;
+}
 
 .portfolio-item img {
   transition: filter 0.5s ease-in-out;
@@ -164,8 +167,37 @@ footer.footer {
 
 .case-slider-wrapper .slick-track {
   display: flex !important;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+}
+.slick-list {
+  height: 100%;
+}
+.slick-track {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.slick-track .slick-slide {
+  height: 100% !important;
+}
+
+.slick-slide div {
+  height: 100%;
+}
+.slick-slide {
+  flex-grow: 1;
+  height: 100% !important;
+}
+.slick-slider {
+  height: 100%;
+}
+.slick-slide.slick-active.slick-current {
+  height: 100%;
 }
 
 .slick-dots li button:before {

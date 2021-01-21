@@ -6,7 +6,7 @@ import { Link } from "gatsby";
 function PortfolioItem({ item }) {
   return (
     <div className="portfolio-item group">
-      <Link to={`portfolio/${item.node.slug}`}>
+      <Link to={`/portfolio/${item.node.slug}`}>
         <div className="relative overflow-hidden">
           <div className="z-10 overlay-effect h-100 w-100"></div>
           <div className="">
