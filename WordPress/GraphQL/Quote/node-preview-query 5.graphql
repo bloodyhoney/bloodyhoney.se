@@ -1,0 +1,37 @@
+query PREVIEW_QUERY($id: ID!) {
+  quote(id: $id, idType: ID, asPreview: true) {
+    citat {
+      fieldGroupName
+      innehall
+    }
+    contentType {
+      node {
+        id
+      }
+    }
+    databaseId
+    date
+    dateGmt
+    desiredSlug
+    enclosure
+    guid
+    id
+    lastEditedBy {
+      node {
+        id
+      }
+    }
+    link
+    modified
+    modifiedGmt
+    slug
+    status
+    template {
+      templateName
+      __typename
+    }
+    title
+    uri
+    __typename
+  }
+}
