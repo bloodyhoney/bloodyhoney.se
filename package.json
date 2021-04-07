@@ -5,7 +5,6 @@
   "author": "Taylor Bryant <taylor@bryant.io>",
   "dependencies": {
     "@farbenmeer/react-spring-slider": "^1.1.1",
-    "@loadable/component": "^5.14.1",
     "@tailwindcss/aspect-ratio": "^0.2.0",
     "bootstrap": "^4.6.0",
     "cross-env": "^7.0.2",
