@@ -22,10 +22,10 @@ function SocialLinks({ fill }) {
           {
             url: `https://www.linkedin.com/company/bloody-honey`,
           },
-        ].map((link) => (
+        ].map((link, index) => (
           <SocialIcon
             className="block text-white md:inline-block w-2"
-            key={link.title}
+            key={index}
             url={link.url}
             fgColor={fill}
             bgColor="transparent"
