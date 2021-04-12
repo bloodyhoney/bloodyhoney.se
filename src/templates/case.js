@@ -18,7 +18,7 @@ function portfolioItem({ data }) {
   };
 
   const portfolio = data.allWpCase.edges[0].node;
-
+  console.log(portfolio.caseInfo.textfarg01);
   return (
     <Layout>
       <SEO
@@ -40,7 +40,8 @@ function portfolioItem({ data }) {
                   <div
                     className="w-full h-full"
                     style={{
-                      backgroundColor: portfolio.caseInfo.bakgrundsfarg_01,
+                      backgroundColor: portfolio.caseInfo.bakgrundsfarg01,
+                      color: portfolio.caseInfo.textfarg01,
                     }}
                   >
                     <CaseSlide
@@ -56,7 +57,13 @@ function portfolioItem({ data }) {
                 {/* Slide 2 */}
                 {portfolio.caseInfo.video02 || portfolio.caseInfo.bild02 ? (
                   <div>
-                    <div className="w-full h-full">
+                    <div
+                      className="w-full h-full"
+                      style={{
+                        backgroundColor: portfolio.caseInfo.bakgrundsfarg02,
+                        color: portfolio.caseInfo.textfarg02,
+                      }}
+                    >
                       <CaseSlide
                         video={portfolio.caseInfo.video02}
                         text={portfolio.caseInfo.bild02}
@@ -70,7 +77,13 @@ function portfolioItem({ data }) {
               <Carousel.Item>
                 {/* Slide 3 */}
                 {portfolio.caseInfo.video03 || portfolio.caseInfo.bild03 ? (
-                  <div className="w-full h-full">
+                  <div
+                    className="w-full h-full"
+                    style={{
+                      backgroundColor: portfolio.caseInfo.bakgrundsfarg03,
+                      color: portfolio.caseInfo.textfarg03,
+                    }}
+                  >
                     <CaseSlide
                       video={portfolio.caseInfo.video03}
                       text={portfolio.caseInfo.bild03}
@@ -84,7 +97,13 @@ function portfolioItem({ data }) {
               {/* Slide 4 */}
               {portfolio.caseInfo.video04 || portfolio.caseInfo.bild04 ? (
                 <Carousel.Item>
-                  <div className="w-full h-full">
+                  <div
+                    className="w-full h-full"
+                    style={{
+                      backgroundColor: portfolio.caseInfo.bakgrundsfarg04,
+                      color: portfolio.caseInfo.textfarg04,
+                    }}
+                  >
                     <CaseSlide
                       video={portfolio.caseInfo.video04}
                       text={portfolio.caseInfo.bild04}
@@ -98,7 +117,13 @@ function portfolioItem({ data }) {
               {/* Slide 5 */}
               {portfolio.caseInfo.video05 || portfolio.caseInfo.bild05 ? (
                 <Carousel.Item>
-                  <div className="w-full h-full">
+                  <div
+                    className="w-full h-full"
+                    style={{
+                      backgroundColor: portfolio.caseInfo.bakgrundsfarg05,
+                      color: portfolio.caseInfo.textfarg05,
+                    }}
+                  >
                     <CaseSlide
                       video={portfolio.caseInfo.video05}
                       text={portfolio.caseInfo.bild05}
@@ -145,6 +170,15 @@ export const query = graphql`
             video04
             video05
             bakgrundsfarg01
+            bakgrundsfarg02
+            bakgrundsfarg03
+            bakgrundsfarg04
+            bakgrundsfarg05
+            textfarg01
+            textfarg02
+            textfarg03
+            textfarg04
+            textfarg05
           }
           title
           featuredImage {

@@ -33,7 +33,7 @@ function Quotes() {
     }
   `);
   const quotes = data.allWpQuote.edges;
-  console.log(data);
+
   return (
     <Slider {...settings}>
       {quotes.map((quote) => {
