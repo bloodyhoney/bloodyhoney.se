@@ -6,7 +6,6 @@ import Layout from "../components/layout";
 import { graphql } from "gatsby";
 import Portfolio from "../components/portfolio/Portfolio";
 import Carousel from "react-bootstrap/Carousel";
-import "bootstrap/dist/css/bootstrap.min.css";
 import CaseSlide from "../components/portfolio/CaseSlide";
 import Presentation from "../components/index/Presentation";
 import BlogCarousel from "../components/blog/BlogCarousel";
@@ -28,7 +27,7 @@ function portfolioItem({ data }) {
       />
       <section className="case-slider-wrapper">
         <div className="flex flex-wrap flex-col w-full">
-          <div className="w-full  min-h-screen flex flex-col items-center justify-center ">
+          <div className="w-full  h-screen-90 flex flex-col items-center justify-center ">
             <Carousel
               activeIndex={index}
               onSelect={handleSelect}
@@ -39,7 +38,7 @@ function portfolioItem({ data }) {
                 {/* Slide 1 */}
                 {portfolio.caseInfo.video01 || portfolio.caseInfo.bild01 ? (
                   <div
-                    className="w-full"
+                    className="w-full h-full"
                     style={{
                       backgroundColor: portfolio.caseInfo.bakgrundsfarg_01,
                     }}
@@ -57,7 +56,7 @@ function portfolioItem({ data }) {
                 {/* Slide 2 */}
                 {portfolio.caseInfo.video02 || portfolio.caseInfo.bild02 ? (
                   <div>
-                    <div className="w-full hej">
+                    <div className="w-full h-full">
                       <CaseSlide
                         video={portfolio.caseInfo.video02}
                         text={portfolio.caseInfo.bild02}
@@ -71,7 +70,7 @@ function portfolioItem({ data }) {
               <Carousel.Item>
                 {/* Slide 3 */}
                 {portfolio.caseInfo.video03 || portfolio.caseInfo.bild03 ? (
-                  <div className="w-full">
+                  <div className="w-full h-full">
                     <CaseSlide
                       video={portfolio.caseInfo.video03}
                       text={portfolio.caseInfo.bild03}
@@ -81,32 +80,34 @@ function portfolioItem({ data }) {
                   ""
                 )}
               </Carousel.Item>
-              <Carousel.Item>
-                {/* Slide 4 */}
-                {portfolio.caseInfo.video04 || portfolio.caseInfo.bild04 ? (
-                  <div className="w-full">
+
+              {/* Slide 4 */}
+              {portfolio.caseInfo.video04 || portfolio.caseInfo.bild04 ? (
+                <Carousel.Item>
+                  <div className="w-full h-full">
                     <CaseSlide
                       video={portfolio.caseInfo.video04}
                       text={portfolio.caseInfo.bild04}
                     />
                   </div>
-                ) : (
-                  ""
-                )}
-              </Carousel.Item>
-              <Carousel.Item>
-                {/* Slide 5 */}
-                {portfolio.caseInfo.video05 || portfolio.caseInfo.bild05 ? (
-                  <div className="w-full">
+                </Carousel.Item>
+              ) : (
+                ""
+              )}
+
+              {/* Slide 5 */}
+              {portfolio.caseInfo.video05 || portfolio.caseInfo.bild05 ? (
+                <Carousel.Item>
+                  <div className="w-full h-full">
                     <CaseSlide
                       video={portfolio.caseInfo.video05}
                       text={portfolio.caseInfo.bild05}
                     />
                   </div>
-                ) : (
-                  ""
-                )}
-              </Carousel.Item>
+                </Carousel.Item>
+              ) : (
+                ""
+              )}
             </Carousel>
           </div>
         </div>

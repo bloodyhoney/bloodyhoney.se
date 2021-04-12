@@ -23,7 +23,7 @@ function PortfolioItem({ item }) {
               }}
             />
           </div>
-          <div className="info-box z-20 uppercase absolute bottom-0 left-0 w-full bg-gray-900 bg-opacity-75 text-white block px-4">
+          <div className="info-box z-20 uppercase absolute bottom-0 left-0 w-full bg-gray-900 bg-opacity-75 hover:bg-opacity-0 text-white block px-4">
             <div className="portfolio-title">
               <h2 className="font-bold text-md pt-2 pb-1">
                 <div
