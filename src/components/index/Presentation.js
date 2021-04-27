@@ -36,8 +36,8 @@ function Presentation() {
           </div>
         </div>
       </div>
-      <div className="flex-1 flex flex-wrap items-center justify-center lg:w-1/2 p-8 md:p-8 bg-gray-900 box text-gray-600">
-        <div className="w-full">
+      <div className="flex-1  lg:w-1/2 px-8 bg-gray-900 box text-gray-600">
+        <div className="w-full h-full">
           <Quotes />
         </div>
       </div>

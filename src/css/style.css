@@ -523,3 +523,7 @@ html body [data-ca3_iconfont="ETmodules"]::before {
 .flickity-page-dots .dot.is-selected {
   opacity: 1;
 }
+
+.carousel-item {
+  min-height: 100%;
+}

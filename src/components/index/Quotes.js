@@ -1,22 +1,9 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import Carousel from "react-bootstrap/Carousel";
 import Quote from "./Quote";
 
 function Quotes() {
-  var settings = {
-    dots: false,
-    arrows: false,
-    infinite: true,
-    autoplay: true,
-    fade: true,
-    autoplaySpeed: 6000,
-    speed: 800,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
   const data = useStaticQuery(graphql`
     {
       allWpQuote {
@@ -35,11 +22,21 @@ function Quotes() {
   const quotes = data.allWpQuote.edges;
 
   return (
-    <Slider {...settings}>
+    <Carousel
+      fade
+      interval={5000}
+      controls={false}
+      indicators={false}
+      className="h-full"
+    >
       {quotes.map((quote) => {
-        return <Quote key={quote.node.id} quote={quote} />;
+        return (
+          <Carousel.Item key={quote.node.id}>
+            <Quote quote={quote} />
+          </Carousel.Item>
+        );
       })}
-    </Slider>
+    </Carousel>
   );
 }
 

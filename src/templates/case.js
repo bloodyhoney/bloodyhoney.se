@@ -9,6 +9,7 @@ import Carousel from "react-bootstrap/Carousel";
 import CaseSlide from "../components/portfolio/CaseSlide";
 import Presentation from "../components/index/Presentation";
 import BlogCarousel from "../components/blog/BlogCarousel";
+import BackgroundImage from "gatsby-background-image";
 
 function portfolioItem({ data }) {
   const [index, setIndex] = useState(0);
@@ -18,7 +19,18 @@ function portfolioItem({ data }) {
   };
 
   const portfolio = data.allWpCase.edges[0].node;
-  console.log(portfolio.caseInfo.textfarg01);
+  console.log(portfolio.caseInfo);
+  const bgImage1 =
+    portfolio.caseInfo.video01Cover?.localFile.childImageSharp.fluid;
+  const bgImage2 =
+    portfolio.caseInfo.video02Cover?.localFile.childImageSharp.fluid;
+  const bgImage3 =
+    portfolio.caseInfo.video03Cover?.localFile.childImageSharp.fluid;
+  const bgImage4 =
+    portfolio.caseInfo.video04Cover?.localFile.childImageSharp.fluid;
+  const bgImage5 =
+    portfolio.caseInfo.video05Cover?.localFile.childImageSharp.fluid;
+
   return (
     <Layout>
       <SEO
@@ -32,83 +44,104 @@ function portfolioItem({ data }) {
               activeIndex={index}
               onSelect={handleSelect}
               interval={null}
+              fade
               className="flex-grow w-full h-full flex flex-col items-center justify-center"
             >
               <Carousel.Item>
-                {/* Slide 1 */}
-                {portfolio.caseInfo.video01 || portfolio.caseInfo.bild01 ? (
-                  <div
-                    className="w-full h-full"
-                    style={{
-                      backgroundColor: portfolio.caseInfo.bakgrundsfarg01,
-                      color: portfolio.caseInfo.textfarg01,
-                    }}
-                  >
-                    <CaseSlide
-                      video={portfolio.caseInfo.video01}
-                      text={portfolio.caseInfo.bild01}
-                    />
-                  </div>
-                ) : (
-                  ""
-                )}
-              </Carousel.Item>
-              <Carousel.Item>
-                {/* Slide 2 */}
-                {portfolio.caseInfo.video02 || portfolio.caseInfo.bild02 ? (
-                  <div>
+                <BackgroundImage
+                  fluid={bgImage1}
+                  className="h-full w-full slide-bg"
+                  backgroundColor={portfolio.caseInfo.bakgrundsfarg01}
+                >
+                  {/* Slide 1 */}
+                  {portfolio.caseInfo.video01 || portfolio.caseInfo.bild01 ? (
                     <div
                       className="w-full h-full"
                       style={{
-                        backgroundColor: portfolio.caseInfo.bakgrundsfarg02,
-                        color: portfolio.caseInfo.textfarg02,
+                        color: portfolio.caseInfo.textfarg01,
                       }}
                     >
                       <CaseSlide
-                        video={portfolio.caseInfo.video02}
-                        text={portfolio.caseInfo.bild02}
+                        video={portfolio.caseInfo.video01}
+                        text={portfolio.caseInfo.bild01}
                       />
                     </div>
-                  </div>
-                ) : (
-                  ""
-                )}
+                  ) : (
+                    ""
+                  )}
+                </BackgroundImage>
               </Carousel.Item>
               <Carousel.Item>
-                {/* Slide 3 */}
-                {portfolio.caseInfo.video03 || portfolio.caseInfo.bild03 ? (
-                  <div
-                    className="w-full h-full"
-                    style={{
-                      backgroundColor: portfolio.caseInfo.bakgrundsfarg03,
-                      color: portfolio.caseInfo.textfarg03,
-                    }}
-                  >
-                    <CaseSlide
-                      video={portfolio.caseInfo.video03}
-                      text={portfolio.caseInfo.bild03}
-                    />
-                  </div>
-                ) : (
-                  ""
-                )}
+                <BackgroundImage
+                  fluid={bgImage2}
+                  className="h-full w-full slide-bg"
+                  backgroundColor={portfolio.caseInfo.bakgrundsfarg02}
+                >
+                  {/* Slide 2 */}
+                  {portfolio.caseInfo.video02 || portfolio.caseInfo.bild02 ? (
+                    <div>
+                      <div
+                        className="w-full h-full"
+                        style={{
+                          color: portfolio.caseInfo.textfarg02,
+                        }}
+                      >
+                        <CaseSlide
+                          video={portfolio.caseInfo.video02}
+                          text={portfolio.caseInfo.bild02}
+                        />
+                      </div>
+                    </div>
+                  ) : (
+                    ""
+                  )}
+                </BackgroundImage>
+              </Carousel.Item>
+              <Carousel.Item>
+                <BackgroundImage
+                  fluid={bgImage3}
+                  className="h-full w-full slide-bg"
+                  backgroundColor={portfolio.caseInfo.bakgrundsfarg03}
+                >
+                  {/* Slide 3 */}
+                  {portfolio.caseInfo.video03 || portfolio.caseInfo.bild03 ? (
+                    <div
+                      className="w-full h-full"
+                      style={{
+                        color: portfolio.caseInfo.textfarg03,
+                      }}
+                    >
+                      <CaseSlide
+                        video={portfolio.caseInfo.video03}
+                        text={portfolio.caseInfo.bild03}
+                      />
+                    </div>
+                  ) : (
+                    ""
+                  )}
+                </BackgroundImage>
               </Carousel.Item>
 
               {/* Slide 4 */}
               {portfolio.caseInfo.video04 || portfolio.caseInfo.bild04 ? (
                 <Carousel.Item>
-                  <div
-                    className="w-full h-full"
-                    style={{
-                      backgroundColor: portfolio.caseInfo.bakgrundsfarg04,
-                      color: portfolio.caseInfo.textfarg04,
-                    }}
+                  <BackgroundImage
+                    fluid={bgImage4}
+                    className="h-full w-full slide-bg"
+                    backgroundColor={portfolio.caseInfo.bakgrundsfarg04}
                   >
-                    <CaseSlide
-                      video={portfolio.caseInfo.video04}
-                      text={portfolio.caseInfo.bild04}
-                    />
-                  </div>
+                    <div
+                      className="w-full h-full"
+                      style={{
+                        color: portfolio.caseInfo.textfarg04,
+                      }}
+                    >
+                      <CaseSlide
+                        video={portfolio.caseInfo.video04}
+                        text={portfolio.caseInfo.bild04}
+                      />
+                    </div>
+                  </BackgroundImage>
                 </Carousel.Item>
               ) : (
                 ""
@@ -117,18 +150,23 @@ function portfolioItem({ data }) {
               {/* Slide 5 */}
               {portfolio.caseInfo.video05 || portfolio.caseInfo.bild05 ? (
                 <Carousel.Item>
-                  <div
-                    className="w-full h-full"
-                    style={{
-                      backgroundColor: portfolio.caseInfo.bakgrundsfarg05,
-                      color: portfolio.caseInfo.textfarg05,
-                    }}
+                  <BackgroundImage
+                    fluid={bgImage5}
+                    className="h-full w-full slide-bg"
+                    backgroundColor={portfolio.caseInfo.bakgrundsfarg05}
                   >
-                    <CaseSlide
-                      video={portfolio.caseInfo.video05}
-                      text={portfolio.caseInfo.bild05}
-                    />
-                  </div>
+                    <div
+                      className="w-full h-full"
+                      style={{
+                        color: portfolio.caseInfo.textfarg05,
+                      }}
+                    >
+                      <CaseSlide
+                        video={portfolio.caseInfo.video05}
+                        text={portfolio.caseInfo.bild05}
+                      />
+                    </div>
+                  </BackgroundImage>
                 </Carousel.Item>
               ) : (
                 ""
@@ -169,6 +207,51 @@ export const query = graphql`
             video03
             video04
             video05
+            video01Cover {
+              localFile {
+                childImageSharp {
+                  fluid {
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+              }
+            }
+            video02Cover {
+              localFile {
+                childImageSharp {
+                  fluid {
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+              }
+            }
+            video03Cover {
+              localFile {
+                childImageSharp {
+                  fluid {
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+              }
+            }
+            video04Cover {
+              localFile {
+                childImageSharp {
+                  fluid {
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+              }
+            }
+            video05Cover {
+              localFile {
+                childImageSharp {
+                  fluid {
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+              }
+            }
             bakgrundsfarg01
             bakgrundsfarg02
             bakgrundsfarg03
