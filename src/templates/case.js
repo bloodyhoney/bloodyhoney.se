@@ -8,8 +8,8 @@ import Portfolio from "../components/portfolio/Portfolio";
 import Carousel from "react-bootstrap/Carousel";
 import CaseSlide from "../components/portfolio/CaseSlide";
 import Presentation from "../components/index/Presentation";
-import BlogCarousel from "../components/blog/BlogCarousel";
 import BackgroundImage from "gatsby-background-image";
+import Instagram from "../components/index/Instagram";
 
 function portfolioItem({ data }) {
   const [index, setIndex] = useState(0);
@@ -39,7 +39,7 @@ function portfolioItem({ data }) {
       />
       <section className="case-slider-wrapper">
         <div className="flex flex-wrap flex-col w-full">
-          <div className="w-full  h-screen-90 flex flex-col items-center justify-center ">
+          <div className="w-full  min-h-screen flex flex-col items-center justify-center ">
             <Carousel
               activeIndex={index}
               onSelect={handleSelect}
@@ -182,8 +182,8 @@ function portfolioItem({ data }) {
       <section>
         <Presentation />
       </section>
-      <section id="#blogg" className="relative">
-        <BlogCarousel />
+      <section>
+        <Instagram />{" "}
       </section>
     </Layout>
   );

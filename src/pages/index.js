@@ -4,7 +4,7 @@ import LayoutFront from "../components/layout-front";
 import SEO from "../components/seo";
 import Presentation from "../components/index/Presentation";
 import Portfolio from "../components/portfolio/Portfolio";
-import BlogCarousel from "../components/blog/BlogCarousel";
+import Instagram from "../components/index/Instagram";
 
 function IndexPage() {
   return (
@@ -20,8 +20,8 @@ function IndexPage() {
       <section>
         <Presentation />
       </section>
-      <section className="relative">
-        <BlogCarousel />
+      <section>
+        <Instagram />
       </section>
     </LayoutFront>
   );

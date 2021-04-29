@@ -50,14 +50,20 @@ module.exports = {
       resolve: `gatsby-source-wordpress`,
       options: {
         url: `https://olleburl.in/bloodyhoney/graphql`,
+
         type: {
           Post: {
-            limit: 30,
+            exclude: true,
           },
         },
       },
     },
-
+    {
+      resolve: `gatsby-source-instagram`,
+      options: {
+        username: `4569208126`,
+      },
+    },
     {
       resolve: "gatsby-plugin-anchor-links",
       options: {
