@@ -1,7 +1,17 @@
 import React from "react";
 import SocialLinks from "../index/SocialLinks";
+import { useStaticQuery, graphql } from "gatsby";
 
 function Footer() {
+  const data = useStaticQuery(graphql`
+    {
+      wpPage(id: {}, slug: { eq: "contact" }) {
+        id
+        content
+      }
+    }
+  `);
+  const post = data.wpPage;
   return (
     <div id="kontakt">
       <footer className="footer text-white">
@@ -13,30 +23,8 @@ function Footer() {
                   <h3 className="font-bold text-3xl">Bloody Beasts</h3>
                   <h2 className="font-bold text-2xl">and where to find us</h2>
                 </header>
-                <h3 className="font-bold text-xl">Charlotte</h3>
-                <p>
-                  Chefen &amp; creative director
-                  <br />
-                  <a href="mailto:charlotte@bloodyhoney.se">
-                    charlotte@bloodyhoney.se
-                  </a>
-                  , 070-483 62 88
-                </p>
-                <h3 className="font-bold text-xl">Emma</h3>
-                <div>
-                  Kreativ projektledare
-                  <br />
-                  <a href="mailto:emma@bloodyhoney.se">emma@bloodyhoney.se</a>,
-                  073-597 39 10<p></p>
-                  <h3 className="font-bold text-xl">Brian</h3>
-                  <p>
-                    Engelsk copy med extra allt
-                    <br />
-                    <a href="mailto:brian@bloodyhoney.se">
-                      brian@bloodyhoney.se
-                    </a>
-                    , 070-422 48 70
-                  </p>
+                <div className="user-content contact">
+                  <div dangerouslySetInnerHTML={{ __html: post.content }}></div>
                 </div>
               </div>
             </div>

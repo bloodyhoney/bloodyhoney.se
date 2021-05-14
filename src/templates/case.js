@@ -9,7 +9,6 @@ import Carousel from "react-bootstrap/Carousel";
 import CaseSlide from "../components/portfolio/CaseSlide";
 import Presentation from "../components/index/Presentation";
 import BackgroundImage from "gatsby-background-image";
-import Instagram from "../components/index/Instagram";
 
 function portfolioItem({ data }) {
   const [index, setIndex] = useState(0);
@@ -37,20 +36,20 @@ function portfolioItem({ data }) {
         keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
         title="Home"
       />
-      <section className="case-slider-wrapper">
-        <div className="flex flex-wrap flex-col w-full">
-          <div className="w-full  min-h-screen flex flex-col items-center justify-center ">
+      <section className="case-slider-wrapper md:min-h-screen ">
+        <div className="flex flex-col w-full h-full">
+          <div className="w-full h-full flex flex-col items-center justify-center ">
             <Carousel
               activeIndex={index}
               onSelect={handleSelect}
               interval={null}
               fade
-              className="flex-grow w-full h-full flex flex-col items-center justify-center"
+              className="w-full h-full flex flex-col items-center justify-center"
             >
               <Carousel.Item>
                 <BackgroundImage
                   fluid={bgImage1}
-                  className="h-full w-full slide-bg"
+                  className="h-full w-full slide-bg object-cover"
                   backgroundColor={portfolio.caseInfo.bakgrundsfarg01}
                 >
                   {/* Slide 1 */}
@@ -74,7 +73,7 @@ function portfolioItem({ data }) {
               <Carousel.Item>
                 <BackgroundImage
                   fluid={bgImage2}
-                  className="h-full w-full slide-bg"
+                  className="h-full w-full slide-bg object-cover"
                   backgroundColor={portfolio.caseInfo.bakgrundsfarg02}
                 >
                   {/* Slide 2 */}
@@ -100,7 +99,7 @@ function portfolioItem({ data }) {
               <Carousel.Item>
                 <BackgroundImage
                   fluid={bgImage3}
-                  className="h-full w-full slide-bg"
+                  className="h-full w-full slide-bg object-cover"
                   backgroundColor={portfolio.caseInfo.bakgrundsfarg03}
                 >
                   {/* Slide 3 */}
@@ -127,7 +126,7 @@ function portfolioItem({ data }) {
                 <Carousel.Item>
                   <BackgroundImage
                     fluid={bgImage4}
-                    className="h-full w-full slide-bg"
+                    className="h-full w-full slide-bg object-cover"
                     backgroundColor={portfolio.caseInfo.bakgrundsfarg04}
                   >
                     <div
@@ -152,7 +151,7 @@ function portfolioItem({ data }) {
                 <Carousel.Item>
                   <BackgroundImage
                     fluid={bgImage5}
-                    className="h-full w-full slide-bg"
+                    className="h-full w-full slide-bg object-cover"
                     backgroundColor={portfolio.caseInfo.bakgrundsfarg05}
                   >
                     <div
@@ -181,9 +180,6 @@ function portfolioItem({ data }) {
       </section>
       <section>
         <Presentation />
-      </section>
-      <section>
-        <Instagram />{" "}
       </section>
     </Layout>
   );

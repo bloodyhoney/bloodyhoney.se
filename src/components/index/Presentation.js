@@ -1,7 +1,17 @@
 import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
 
 import Quotes from "./Quotes";
 function Presentation() {
+  const data = useStaticQuery(graphql`
+    {
+      wpPage(id: {}, slug: { eq: "det-har-ar-bloody-honey" }) {
+        id
+        content
+      }
+    }
+  `);
+  const post = data.wpPage;
   return (
     <div className="lg:flex testimonials">
       <div className="flex items-center lg:w-1/2 p-4 md:p-16 mango-gradient text-yellow-400">
@@ -13,30 +23,11 @@ function Presentation() {
             </h3>
           </header>
           <div className="text-lg">
-            <p>Bloody Honey är produktionsbolaget där allt är möjligt.</p>
-            <p>
-              Ödlor som äter choklad… dansande bakterier… barn på månen…
-              kompositörer med fattig skäggväxt…
-            </p>
-            <p>
-              Detta är bara några av historierna vi berättat tillsammans med
-              våra kunder.
-            </p>
-            <p>
-              Med ena foten i berättelsen och det andra i animationen hjälper vi
-              företag med reklamfilm, företagsfilm, explainer videos samt tv- &
-              filmgrafik. och inte nog med det – vi är ena riktiga djävlar på
-              grafisk design och copywriting.
-            </p>
-            <p>
-              Oavsett vad vi jobbar med är målet alltid detsamma: att berätta
-              och visualisera en historia på ett kul, gripande och smittsamt
-              enkelt sätt.
-            </p>
+            <div dangerouslySetInnerHTML={{ __html: post.content }}></div>
           </div>
         </div>
       </div>
-      <div className="flex-1  lg:w-1/2 px-8 bg-gray-900 box text-gray-600">
+      <div className="flex-1  lg:w-1/2  bg-gray-900 box text-gray-600 ">
         <div className="w-full h-full">
           <Quotes />
         </div>

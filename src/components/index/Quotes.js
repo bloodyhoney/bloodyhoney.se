@@ -14,6 +14,17 @@ function Quotes() {
             citat {
               innehall
             }
+            featuredImage {
+              node {
+                localFile {
+                  childImageSharp {
+                    fluid {
+                      ...GatsbyImageSharpFluid_withWebp
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       }

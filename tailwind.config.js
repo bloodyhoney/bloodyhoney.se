@@ -46,9 +46,8 @@ module.exports = {
       "odd",
       "even",
     ],
+    aspectRatio: ["responsive", "hover"],
   },
   // https://github.com/tailwindcss/custom-forms
-  plugins: [
-    require("@tailwindcss/custom-forms", require("@tailwindcss/aspect-ratio")),
-  ],
+  plugins: [require("@tailwindcss/aspect-ratio")],
 };

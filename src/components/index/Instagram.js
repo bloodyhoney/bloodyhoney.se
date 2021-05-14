@@ -5,16 +5,18 @@ import InstagramItem from "./InstagramItem";
 const Instagram = () => {
   const data = useStaticQuery(graphql`
     {
-      allInstaNode(limit: 8, sort: { fields: timestamp, order: DESC }) {
-        edges {
-          node {
-            timestamp
-            id
-            localFile {
-              childImageSharp {
-                fluid(maxWidth: 300, maxHeight: 300, quality: 70) {
-                  ...GatsbyImageSharpFluid_withWebp
-                }
+      allInstagramContent(
+        limit: 8
+        filter: { username: { eq: "bloodyhoney_studio" } }
+      ) {
+        nodes {
+          id
+          media_id
+          permalink
+          localFile {
+            childImageSharp {
+              fluid(maxWidth: 400, maxHeight: 400, quality: 80) {
+                ...GatsbyImageSharpFluid_withWebp
               }
             }
           }
@@ -24,9 +26,9 @@ const Instagram = () => {
   `);
   return (
     <div>
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-        {data.allInstaNode.edges.map((post) => {
-          return <InstagramItem key={post.node.id} post={post} />;
+      <div className="grid grid-cols-1 md:grid-cols-4">
+        {data.allInstagramContent.nodes.map((post) => {
+          return <InstagramItem key={post.id} post={post} />;
         })}
       </div>
     </div>
