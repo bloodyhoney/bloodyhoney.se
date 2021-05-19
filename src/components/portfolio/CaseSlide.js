@@ -2,20 +2,24 @@
 import React from "react";
 import VimeoPlayer from "./VimeoPlayer";
 
-function CaseSlide({ video, text }) {
+function CaseSlide({ video, text, color }) {
+  console.log(color);
   return (
-    <div className="flex h-full items-center justify-center relative max-w-6xl mx-auto md:px-4">
-      <div className="slide-item flex-grow flex items-center justify-center flex-col md:flex-row px-8 ">
+    <div className="h-full max-w-6xl mx-auto md:px-4">
+      <div className="slide-item  flex flex-col h-full justify-center items-center  px-8">
         {text ? (
-          <div className="md:flex-1 md:px-12 max-h-screen overflow-scroll py-16">
-            <div dangerouslySetInnerHTML={{ __html: text }}></div>
+          <div className="md:px-12 bg-black bg-opacity-25 p-4 relative overflow-scroll mt-24 mb-12">
+            <div
+              dangerouslySetInnerHTML={{ __html: text }}
+              style={{ color: `${color}` }}
+            ></div>
           </div>
         ) : (
           ""
         )}
         {video ? (
-          <div className="md:flex-1 md:px-12 py-8 w-full">
-            <div className="w-full h-full">
+          <div className="md:flex-1 md:px-12 py-8 h-full relative w-full ">
+            <div className="w-full h-full flex flex-col justify-center items-center">
               <VimeoPlayer id={video} />
             </div>
           </div>
