@@ -410,6 +410,12 @@ html body [data-ca3_iconfont="ETmodules"]::before {
   -webkit-perspective: 1000px;
   perspective: 1000px;
 }
+.carousel-item div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @apply h-full w-full;
+}
 
 .carousel-item.active,
 .carousel-item-next,

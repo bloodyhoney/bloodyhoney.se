@@ -4,7 +4,7 @@ import VimeoPlayer from "./VimeoPlayer";
 
 function CaseSlide({ video, text }) {
   return (
-    <div className="flex h-full items-center justify-center relative pt-24 cpb-16  max-w-6xl mx-auto md:px-4">
+    <div className="flex h-full items-center justify-center relative max-w-6xl mx-auto md:px-4">
       <div className="slide-item flex-grow flex items-center justify-center flex-col md:flex-row px-8 ">
         {text ? (
           <div className="md:flex-1 md:px-12 max-h-screen overflow-scroll py-16">

@@ -36,7 +36,7 @@ function portfolioItem({ data }) {
         keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
         title="Home"
       />
-      <section className="case-slider-wrapper h-screen bg-pink-300 flex flex-col">
+      <section className="case-slider-wrapper h-screen-80 md:h-screen flex flex-col">
         <div className="flex flex-col flex-wrap w-full h-full flex-grow">
           <div className="w-full h-full flex flex-col items-center justify-center ">
             <Carousel
