@@ -15,7 +15,12 @@ const Instagram = () => {
           permalink
           localFile {
             childImageSharp {
-              fluid(maxWidth: 400, maxHeight: 400, quality: 80) {
+              fluid(
+                maxWidth: 400
+                maxHeight: 400
+                quality: 80
+                cropFocus: CENTER
+              ) {
                 ...GatsbyImageSharpFluid_withWebp
               }
             }
