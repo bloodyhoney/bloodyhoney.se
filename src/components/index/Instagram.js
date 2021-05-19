@@ -26,7 +26,7 @@ const Instagram = () => {
   `);
   return (
     <div>
-      <div className="grid grid-cols-1 md:grid-cols-4">
+      <div className="grid grid-cols-2 md:grid-cols-4">
         {data.allInstagramContent.nodes.map((post) => {
           return <InstagramItem key={post.id} post={post} />;
         })}
