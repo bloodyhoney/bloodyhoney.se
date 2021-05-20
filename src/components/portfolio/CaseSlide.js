@@ -6,13 +6,10 @@ function CaseSlide({ video, text, color }) {
   console.log(color);
   return (
     <div className="h-full max-w-6xl mx-auto md:px-4">
-      <div className="slide-item  flex flex-col h-full justify-center items-center  px-8">
+      <div className="slide-item  flex flex-col h-full h-screen justify-center items-center  px-8">
         {text ? (
-          <div className="md:px-12 bg-black bg-opacity-25 p-4 relative overflow-scroll md:overflow-visible mt-24 mb-12 h-full">
-            <div
-              dangerouslySetInnerHTML={{ __html: text }}
-              style={{ color: `${color}` }}
-            ></div>
+          <div className="md:px-12 bg-black text-white bg-opacity-25 p-4 relative overflow-scroll md:overflow-visible mt-24 mb-12 ">
+            <div dangerouslySetInnerHTML={{ __html: text }}></div>
           </div>
         ) : (
           ""
