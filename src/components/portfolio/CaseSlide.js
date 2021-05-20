@@ -8,7 +8,7 @@ function CaseSlide({ video, text, color }) {
     <div className="h-full max-w-6xl mx-auto md:px-4">
       <div className="slide-item  flex flex-col h-full justify-center items-center  px-8">
         {text ? (
-          <div className="md:px-12 bg-black bg-opacity-25 p-4 relative overflow-scroll mt-24 mb-12">
+          <div className="md:px-12 bg-black bg-opacity-25 p-4 relative overflow-scroll md:overflow-visible mt-24 mb-12 h-full">
             <div
               dangerouslySetInnerHTML={{ __html: text }}
               style={{ color: `${color}` }}
